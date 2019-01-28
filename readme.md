@@ -1,9 +1,14 @@
 # Pandoc practice
 
+## linux 解决"zsh: no matches found"
+
+1.  在 `~/.zshrc` 中加入：`setopt no_nomatch`
+1.  执行 `source ~/.zshrc`
+
 ## Remove everything related to TeX Live for fresh install on Ubuntu
 
 1.  `sudo apt-get purge texlive*`
-1.  `sudo rm -rf /usr/local/texlive/* and rm -rf ~/.texlive*`
+1.  `sudo rm -rf /usr/local/texlive/*` and `rm -rf ~/.texlive*`
 1.  `sudo rm -rf /usr/local/share/texmf`
 1.  `sudo rm -rf /var/lib/texmf`
 1.  `sudo rm -rf /etc/texmf`
@@ -33,7 +38,7 @@ brew install pandoc-citeproc
 
 ## 文献的引用
 
-在文章中直接引用@goodfellow2016deeplearning即可. 需要关联对应的.bib文件.
+在文章中直接引用`@goodfellow2016deeplearning`即可. 需要关联对应的`.bib`文件.
 
 ## 例子
 
@@ -49,4 +54,5 @@ brew install pandoc-citeproc
 ## References
 
 1.  [How to remove everything related to TeX Live for fresh install on Ubuntu?](https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu)
-1. [用Markdown写作学术论文](https://zhuanlan.zhihu.com/p/33727304)
+1.  [用 Markdown 写作学术论文](https://zhuanlan.zhihu.com/p/33727304)
+1.  [linux 解决"zsh: no matches found"](https://blog.csdn.net/qq_36148847/article/details/79260745)
