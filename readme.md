@@ -1,6 +1,17 @@
 # Pandoc practice
 
-## Remove TeX Live for fresh install on Ubuntu
+## Installing pandoc on Ubuntu
+
+### For PDF output, you’ll need LaTeX
+
+`sudo apt-get install texlive-full`
+
+This package is very huge, enough time and space(several gigabytes) needed to
+install it. If any broken happens, you may need to purge the unmet dependencies:
+
+`sudo dpkg --force-all --purge [unmet dependencies]`
+
+And then remove TeX Live for fresh install on Ubuntu:
 
 ```bash
 sudo apt-get purge texlive-*
@@ -8,28 +19,32 @@ sudo apt-get autoremove
 sudo apt-get autoclean
 ```
 
-If apt-get broken:
-
-`sudo dpkg --force-all --purge [unmet dependencies]`
-
-If "zsh: no matches found":
+If encounter "zsh: no matches found":
 
 1.  在 `~/.zshrc` 中加入：`setopt no_nomatch`
 1.  执行 `source ~/.zshrc`
 
-## Remove pandoc from Anaconda
+### Quick cabal method
 
-`conda uninstall pandoc`
+1.  Install the Haskell platform: `sudo apt-get install haskell-platform`
+1.  Update your package database: `cabal update`
+1.  Check your cabal version: `cabal --version`
+1.  If you have a version less than 2.0, install the latest with:
+    `cabal install cabal-install`
+1.  Use cabal to install pandoc and its dependencies: `cabal install pandoc`
 
-## Installing pandoc
-
-### macOS
+## Installing pandoc on MacOS
 
 ```bash
 brew install pandoc
 brew install pandoc-crossref
 brew install pandoc-citeproc
+brew install homebrew/cask/basictex
 ```
+
+## Remove pandoc from Anaconda
+
+`conda uninstall pandoc`
 
 ## 公式和图片的引用
 
