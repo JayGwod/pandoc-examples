@@ -1,20 +1,21 @@
 # Pandoc practice
 
-## linux 解决"zsh: no matches found"
+## Remove TeX Live for fresh install on Ubuntu
+
+```bash
+sudo apt-get purge texlive-*
+sudo apt-get autoremove
+sudo apt-get autoclean
+```
+
+If apt-get broken:
+
+`sudo dpkg --force-all --purge [unmet dependencies]`
+
+If "zsh: no matches found":
 
 1.  在 `~/.zshrc` 中加入：`setopt no_nomatch`
 1.  执行 `source ~/.zshrc`
-
-## Remove everything related to TeX Live for fresh install on Ubuntu
-
-1.  `sudo apt-get purge texlive*`
-1.  `sudo rm -rf /usr/local/texlive/*` and `rm -rf ~/.texlive*`
-1.  `sudo rm -rf /usr/local/share/texmf`
-1.  `sudo rm -rf /var/lib/texmf`
-1.  `sudo rm -rf /etc/texmf`
-1.  `sudo apt-get remove tex-common --purge`
-1.  `rm -rf ~/.texlive`
-1.  `find -L /usr/local/bin/ -lname /usr/local/texlive/*/bin/* | sudo xargs rm`
 
 ## Remove pandoc from Anaconda
 
@@ -56,3 +57,5 @@ brew install pandoc-citeproc
 1.  [How to remove everything related to TeX Live for fresh install on Ubuntu?](https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu)
 1.  [用 Markdown 写作学术论文](https://zhuanlan.zhihu.com/p/33727304)
 1.  [linux 解决"zsh: no matches found"](https://blog.csdn.net/qq_36148847/article/details/79260745)
+1.  [apt-get broken after version update (unmet dependencies)](https://askubuntu.com/questions/744585/apt-get-broken-after-version-update-unmet-dependencies)
+1.  [How to remove texlive 2009 on ubuntu 12.04](https://askubuntu.com/questions/485542/how-to-remove-texlive-2009-on-ubuntu-12-04?rq=1)
