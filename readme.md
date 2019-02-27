@@ -24,14 +24,23 @@ If encounter "zsh: no matches found":
 1.  在 `~/.zshrc` 中加入：`setopt no_nomatch`
 1.  执行 `source ~/.zshrc`
 
-### Quick cabal method
+### Quick stack method
 
-1.  Install the Haskell platform: `sudo apt-get install haskell-platform`
-1.  Update your package database: `cabal update`
-1.  Check your cabal version: `cabal --version`
-1.  If you have a version less than 2.0, install the latest with:
-    `cabal install cabal-install`
-1.  Use cabal to install pandoc and its dependencies: `cabal install pandoc`
+The easiest way to build pandoc from source is to use stack:
+
+1.  Install
+    [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/). Note
+    that Pandoc requires stack >= 1.7.0.
+1.  Change to the pandoc source directory and issue the following commands:
+    ```bash
+    stack setup
+    stack install
+    ```
+
+stack setup will automatically download the ghc compiler if you don’t have it.
+stack install will install the pandoc executable into ~/.local/bin, which you
+should add to your PATH. This process will take a while, and will consume a
+considerable amount of disk space.
 
 ## Installing pandoc on MacOS
 
