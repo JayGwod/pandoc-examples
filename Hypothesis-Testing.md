@@ -2,7 +2,11 @@
 
 ## the calculation of the sample mean from the raw observations
 
-## the formulation of the hypotheses, H0 and H1
+$$ \overline{x} = (992+1002+1000+1001+998+999+1000+995+1003+1001+997+997)/12 = 998.75 $$
+
+## the formulation of the hypotheses, H*{0} and H*{1}
+
+$H_{0}: \mu = 1000$ml vs. $H_{1}: \mu \neq 1000$ml.
 
 ## calculation of the test statistic value
 
