@@ -4,7 +4,7 @@
 
 $$ \overline{x} = (992+1002+1000+1001+998+999+1000+995+1003+1001+997+997)/12 = 998.75 $$
 
-## the formulation of the hypotheses, H*{0} and H*{1}
+## the formulation of the hypotheses, H_{0} and H_{1}
 
 $H_{0}: \mu = 1000$ml vs. $H_{1}: \mu \neq 1000$ml.
 
@@ -12,7 +12,7 @@ $H_{0}: \mu = 1000$ml vs. $H_{1}: \mu \neq 1000$ml.
 
 ## calculation of the p-value
 
-## a decision of whether or not to reject H0
+## a decision of whether or not to reject H_{0}
 
 ## an inferential conclusion about what the test result means
 
