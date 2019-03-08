@@ -1,19 +1,54 @@
 # Assignment Two: Hypothesis Testing
 
-## the calculation of the sample mean from the raw observations
+## Calculation of the sample mean from the raw observations
 
 $$ \overline{x} = (992+1002+1000+1001+998+999+1000+995+1003+1001+997+997)/12 = 998.75 $$
 
-## the formulation of the hypotheses, H_{0} and H_{1}
+## Formulation of the hypotheses, $H_{0}$ and $H_{1}$
 
 $H_{0}: \mu = 1000$ml vs. $H_{1}: \mu \neq 1000$ml.
 
-## calculation of the test statistic value
+## Calculation of the test statistic value
 
-## calculation of the p-value
+We proceed by **standardising** $\overline{X}$ such that:
 
-## a decision of whether or not to reject H_{0}
+$$ Z = \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1) $$
 
-## an inferential conclusion about what the test result means
+acts as our **test statistic**. Note the test statistic includes the effect size,
+$\overline{X}-\mu$, as well as sample size, $n$.
 
-## indication of which type of error might have occurred
+Using our sample data, we now obtain the test statistic value (noting the **influence of
+both the effect size and the sample size**, and hence ultimately the influence on the
+$p$-value):
+
+$$ \frac{1000 - 998.75}{\sqrt{1.5}/\sqrt{12}} \approx 3.5. $$
+
+## Calculation of the $p$-value
+
+The $p$-value is the probability of our test statistic value or a more extreme
+value conditional on $H_0$. Noting that $H_1:\mu \neq 1000$, 'more extreme' here
+means a $z$-score > 3.5 and < -3.5. Due to the symmetry of the standard normal
+distribution about zero, this can be expressed as:
+
+$$ p-value = P(Z \geq \mid 3.5 \mid) = 0.00046. $$
+
+## A decision of whether or not to reject $H_{0}$
+
+Recall the **$p$-value decision rule**, since 0.00046 < 0.05 we reject $H_0$ and
+conclude that the result 'statistically significant' at the 5% significance level
+(and also, of course, at the 1% significance level).
+
+## An inferential conclusion about what the test result means
+
+Hence there is (strong) evidence that $\mu \neq 1000$. Since $\overline{x} < \mu$
+we might go further and suppose that $\mu < 1000$.
+
+## Indication of which type of error might have occurred
+
+As we have rejected $H_0$ this means of two things:
+
+- we have correctly rejected $H_0$
+- we have committed a Type I error.
+
+Although the $p$-value is very small, indicating it is *highly unlikely* that is
+a Type I error, unfortunately we cannot be certain which outcome has actually occurred!

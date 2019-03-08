@@ -1,3 +1,5 @@
+\pagebreak
+
 # Examples
 
 ## Crossref to a figure

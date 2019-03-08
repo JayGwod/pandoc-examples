@@ -1,6 +1,4 @@
 ---
-mainfont: "WenQuanYi Micro Hei Mono"
-
 figureTitle: "图"
 figPrefix: "图"
 
