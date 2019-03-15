@@ -16,9 +16,9 @@ Decisions have to be taken in the present, with **uncertain future outcomes**.
 
 There are two important implications for everyone in the **age of technology**:
 
-1. **Collect vast amounts of data** - the era of **'big data'**.
-1. **Analyse data** and **make decisions** on the basis of quantitative
-   analysis.
+1.  **Collect vast amounts of data** - the era of **'big data'**.
+1.  **Analyse data** and **make decisions** on the basis of quantitative
+    analysis.
 
 A source of competitive advantage: **data-driven decision-making**
 
@@ -27,8 +27,8 @@ having more than one possible outcome.**
 
 The possible results from the decision are a function of two variables:
 
-1. **internal variables**: we can control.
-1. **external variables**: we cannot control.
+1.  **internal variables**: we can control.
+1.  **external variables**: we cannot control.
 
 Uncertain variables --> The uncertain outcome
 
@@ -62,10 +62,11 @@ good outcomes, but in the long run is far from optimal.
 - find predictive relationships between the factors and the potential outcomes.
 - seek to understand the problem.
 
-1. Define mathematically the relationships;
-1. Evaluate the significance of the predictive value of the relationships found;
-1. Quantitatively express the expected results or consequences of the decision
-   we are making.
+1.  Define mathematically the relationships;
+1.  Evaluate the significance of the predictive value of the relationships
+    found;
+1.  Quantitatively express the expected results or consequences of the decision
+    we are making.
 
 ## 1.3 Uncertainty in the news
 
@@ -105,3 +106,21 @@ usually _simplifying_ assumptions.
 
 Beware assumptions - if you make a wrong or invalid assumption, then decisions
 you make in good faith may lead to outcomes far from what you expected.
+
+## 2.1 Probability principles
+
+The first basic concepts in probability will be the following:
+
+- **Experiment**: For example, rolling a single die and recording the outcome.
+- **Outcome** of the experiment: For example, rolling a 3.
+- **Sample space** _S_: The _set_ of all possible outcomes, here {1,2,3,4,5,6}.
+- **Event**: Any _subset A_ of the sample space, for example _A_ = {4,5,6}.
+
+Probability, _P(A)_, will be defined as a _function_ which assigns probabilities
+(real numbers) to events (sets). A **set** is a collection of **elements** (also
+known as 'members' of the set).
+
+An **experiment** is a process which produces outcomes and which can have
+several _different_ **outcomes**. The **sample space** _S_ is the set of all
+possible outcomes of the experiment. An **event** is any subset _A_ of the
+sample space such that $A \subset S$, where $\subset$ denotes a subset.
