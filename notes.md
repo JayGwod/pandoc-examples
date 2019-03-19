@@ -161,8 +161,8 @@ particular **event**, or **set**, of interest.
 
 The universal convention is that we define probability to lie on a scale from 0
 to 1 inclusive. Hence the **probability of any event A**, say, is denoted
-**$P(A)$** and is a real number somewhere in the unit interval, i.e.
-$P(A) \in [0, 1]$, where '$\in$' means 'is a member of'.
+**$P(A)$** and is a real number somewhere in the unit interval, i.e. $P(A) \in
+[0, 1]$, where '$\in$' means 'is a member of'.
 
 ### Determining event probabilities for equally likely elementary outcomes
 
@@ -175,11 +175,8 @@ can be found by just counting outcomes. This requires that:
 Suppose that the sample space $S$ contains $N$ equally likely outcomes, and that
 event A consists of $n \leq N$ of these outcomes. We then have that:
 
-$$
-P(A) = \frac{n}{N}
-= \frac{\text{number of outcomes in }A}
-{\text{total number of outcomes in the sample space }S}.
-$$
+$$ P(A) = \frac{n}{N} = \frac{\text{number of outcomes in }A} {\text{total
+number of outcomes in the sample space }S}. $$
 
 That is, the probability of $A$ is the **proportion** of outcomes which belong
 to $A$ out of all possible outcomes.
@@ -215,10 +212,8 @@ _value_ of the random variable.
 If $x_1, x_2, …, x_N$ are the possible values of the random variable $X$, with
 corresponding probabilities $p(x_1), p(x_2), …, p(x_N)$, then:
 
-$$
-E(X) = \mu = \sum_{i=1}^{N} x_i p(x_i)
-= x_1 p_(x_1) + x_2 p(x_2) + … + x_N p(x_N).
-$$
+$$ E(X) = \mu = \sum*{i=1}^{N} x_i p(x_i) = x_1 p*(x_1) + x_2 p(x_2) + … + x_N
+p(x_N). $$
 
 Note that the expected value is also referred to as the **population mean**,
 which can be written as $E(X)$ (in words 'the expectation of the random variable
@@ -233,20 +228,17 @@ Suppose the random variable $X$ can have $K$ different values $X_1, …, X_K$, a
 their **frequencies** in a random sample are $f_1, …, f_K$, respectively.
 Therefore, the sample mean of $X$ is:
 
-$$
-\overline{X} = \frac{f_1 x_1 + … + f_K x_K}{f_1 + … + f_K}
-= x_1 \hat{p}(x_1) + … + x_K \hat{p}(x_K)
-= \sum_{i=1}^K x_i \hat{p}(x_i)
-$$
+$$ \overline{X} = \frac{f*1 x_1 + … + f_K x_K}{f_1 + … + f_K} = x_1
+\hat{p}(x_1) + … + x_K \hat{p}(x_K) = \sum*{i=1}^K x_i \hat{p}(x_i) $$
 
 where:
 
-$$ \hat{p}(x_i) = \frac{f_i}{\sum_{i=1}^K f_i} $$
+$$ \hat{p}(x*i) = \frac{f_i}{\sum*{i=1}^K f_i} $$
 
 are the **sample proportions** of the values $x_i$. The expected value of the
 random variable $X$ is:
 
-$$ E(X) = x_1 p(x_1) + … + x_K p(x_K) = \sum_{i=1}^K x_i p(x_i). $$
+$$ E(X) = x*1 p(x_1) + … + x_K p(x_K) = \sum*{i=1}^K x_i p(x_i). $$
 
 So $\overline{X}$ uses sample proportions, $\hat{p}(x_i)$, whereas $E(X)$ uses
 the population probabilities, $p(x_i)$.
@@ -275,7 +267,7 @@ and for some event $A$, then:
   Technically, this is the division of the sample space into mutually exclusive
   and collectively exhaustive events.
 
-$$ P(B_k|A) = \frac{P(A|B_k)P(B_k)}{\sum_{i=1}^n P(A|B_i)P(B_i)}. $$
+$$ P(B*k|A) = \frac{P(A|B_k)P(B_k)}{\sum*{i=1}^n P(A|B_i)P(B_i)}. $$
 
 ## 2.5 Parameters
 
@@ -299,12 +291,8 @@ function**:[^2]
   A probability function is simply a function which returns the probability of a
   particular value of $X$.
 
-$$
-P(X=x) = \left\{ \begin{array}{ll}
-\pi^x (1 - \pi)^{1-x}
-& \text{for } x = 0, 1 \\ 0 & \text{otherwise}.
-\end{array}\right.
-$$
+$$ P(X=x) = \left\{ \begin{array}{ll} \pi^x (1 - \pi)^{1-x} & \text{for } x = 0,
+1 \\ 0 & \text{otherwise}. \end{array}\right. $$
 
 We could express this family of Bernoulli distributions in tabular for as
 follows:
@@ -335,14 +323,14 @@ $\pi$.
 
 ## 2.6 The distribution zoo
 
-Suppose we carry out **n Bernoulli trials** such that:
+Suppose we carry out **$n$ Bernoulli trials** such that:
 
 - at each trial, the probability of success is $\pi$
 - different trials are statistically independent events.
 
 Let $X$ denote the total number of successes in these $n$ trials, then $X$
-follows a **binomial distribution** with parameters $n$ and $pi$, where
-$n \geq 1$ is a known integer and $0 \leq \pi \leq 1$. This is often written as:
+follows a **binomial distribution** with parameters $n$ and $pi$, where $n \geq
+1$ is a known integer and $0 \leq \pi \leq 1$. This is often written as:
 
 $$ X \sim \text{Bin}(n, \pi). $$
 
@@ -352,11 +340,8 @@ $$ E(X) = n \pi. $$
 
 In general, the **probability function** of $X \sim \text{Bin}(n, \pi)$ is:
 
-$$
-P(X = x) = \left\{ \begin{array}{ll}
-           \binom{n}{x} \pi^x (1 - \pi)^{n-x} & \text{for } x = 0,1,...,n \\
-           0 & \text{otherwise.} \end{array} \right.
-$$
+$$ P(X = x) = \left\{ \begin{array}{ll} \binom{n}{x} \pi^x (1 - \pi)^{n-x} &
+\text{for } x = 0,1,...,n \\ 0 & \text{otherwise.} \end{array} \right. $$
 
 where $\binom{n}{x}$ is the **binomial coefficient** - in short, the number of
 ways of choosing $x$ objects out of $n$ when sampling without replacement when
@@ -368,3 +353,78 @@ $$ \binom{n}{x} = \frac{n!}{x!(n-x)!} $$
 
 where $k! = k \times (k - 1) \times … \times 3 \times 2 \times 1$, for an
 integer $k > 0$. Also note that $0! = 1$.
+
+### Poisson distribution
+
+The possible values of the **Poisson distribution** are the non-negative
+integers 0, 1, 2, ...
+
+The **probability function** of the Poisson distribution is:
+
+$$ P(X = x) = \left\{ \begin{array}{ll} e^{-\lambda}\lambda^{x}/x! & \text{for
+}x = 0,1,2,... \\ 0 & \text{otherwise} \end{array} \right. $$
+
+where $\lambda > 0$ is a parameter, $e$ is the exponential constant ($\e \approx
+2.71828) and $x!$ is **'$x$ factorial'**, defined earlier as:
+
+$$ x! = x \times x - 1 \times x - 2 \times … \times 3 \times 2 \times 1. $$
+
+If a random variable $X$ has a Poisson distribution with parameter $\lambda$,
+this is often denoted by:
+
+$$ X \sim \text{Poisson}(\lambda) \text{ or } X \sim \text{Pois}(\lambda). $$
+
+If $X \sim \text{Poisson}(\lambda)$, then:
+
+$$ E(X) \sim \lambda $$
+
+Poisson distributions are used for _counts_ of occurrences of various kinds. To
+give a formal motivation, suppose that we consider the number of occurrences of
+some phenomenon in time, and that the process which generate the occurrences
+satisfies the following conditions:
+
+1.  The numbers of occurrences in any two _disjoint_ intervals of time are
+    independent of each other.
+1.  The probability of two or more occurrences at the _same_ time is negligibly
+    small.
+1.  The probability of one occurrence in any short time interval of length $t$
+    is $\lambda t$ for some constant $\lambda > 0$.
+
+In essence, these state that individual occurrences should be independent,
+sufficiently rare, and happen at a constant rate $\lambda$ per unit of time. A
+process like this is a **Poisson process**.
+
+If occurrences are generated by a Poisson process, then the number of
+occurrences in a randomly selected time interval of length $t = 1$, $X$, follows
+a Poisson distribution with mean $\lambda$, i.e. $X \sim
+\text{Poisson}(\lambda)$.
+
+The single parameter $\lambda$ of the Poisson distribution is, therefore, the
+$rate$ of occurrences per unit of time.
+
+### Connections between probability distributions
+
+There are close connections between some probability distributions, even across
+different families of them:
+
+- **exact**: one is exactly equal to another, for particular values of the
+  parameters.
+- **approximate** (or **asymptotic**): one is closely approximated by another
+  under some limiting conditions.
+
+### Poisson approximation of the binomial distribution
+
+Suppose that:
+
+- $X \sim \text{Bin}(n, \pi)$.
+- $n$ is large and $\pi$ is small.
+
+Under such circumstances, the distribution of $X$ is well-approximated by a
+$\text{Poisson}(\lambda)$ distribution with $\lambda = n \pi$.
+
+The connection is exact at the limit, i.e. $\text{Bin}(n,\pi) \to
+\text{Poisson}(\lambda)$ if $n \to \infty$ and $\pi \to 0$ in such a way that $n
+\pi = \lambda$ remains constant.
+
+This **'law of small numbers'** provides another motivation for the Poisson
+distribution.
