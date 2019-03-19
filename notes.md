@@ -175,7 +175,11 @@ can be found by just counting outcomes. This requires that:
 Suppose that the sample space $S$ contains $N$ equally likely outcomes, and that
 event A consists of $n \leq N$ of these outcomes. We then have that:
 
-$$P(A) = \frac{n}{N} = \frac{\text{number of outcomes in }A}{\text{total number of outcomes in the sample space }S}.$$
+$$
+P(A) = \frac{n}{N}
+= \frac{\text{number of outcomes in }A}
+{\text{total number of outcomes in the sample space }S}.
+$$
 
 That is, the probability of $A$ is the **proportion** of outcomes which belong
 to $A$ out of all possible outcomes.
@@ -211,7 +215,10 @@ _value_ of the random variable.
 If $x_1, x_2, …, x_N$ are the possible values of the random variable $X$, with
 corresponding probabilities $p(x_1), p(x_2), …, p(x_N)$, then:
 
-$$ E(X) = \mu = \sum_{i=1}^{N} x_i p(x_i) = x_1 p_(x_1) + x_2 p(x_2) + … + x_N p(x_N). $$
+$$
+E(X) = \mu = \sum_{i=1}^{N} x_i p(x_i)
+= x_1 p_(x_1) + x_2 p(x_2) + … + x_N p(x_N).
+$$
 
 Note that the expected value is also referred to as the **population mean**,
 which can be written as $E(X)$ (in words 'the expectation of the random variable
@@ -227,7 +234,9 @@ their **frequencies** in a random sample are $f_1, …, f_K$, respectively.
 Therefore, the sample mean of $X$ is:
 
 $$
-\overline{X} = \frac{f_1 x_1 + … + f_K x_K}{f_1 + … + f_K} = x_1 \hat{p}(x_1) + … + x_K \hat{p}(x_K) = \sum_{i=1}^K x_i \hat{p}(x_i)
+\overline{X} = \frac{f_1 x_1 + … + f_K x_K}{f_1 + … + f_K}
+= x_1 \hat{p}(x_1) + … + x_K \hat{p}(x_K)
+= \sum_{i=1}^K x_i \hat{p}(x_i)
 $$
 
 where:
@@ -261,8 +270,101 @@ $$ P(B^c) = 1 - P(B) $$
 For a general **partition**[^1] of the sample space $S$ into $B_1, B_2, …, B_n$,
 and for some event $A$, then:
 
-[^1]: Technically, this is the division of the sample space into mutually
+[^1]:
 
-exclusive and collectively exhaustive events.
+  Technically, this is the division of the sample space into mutually exclusive
+  and collectively exhaustive events.
 
 $$ P(B_k|A) = \frac{P(A|B_k)P(B_k)}{\sum_{i=1}^n P(A|B_i)P(B_i)}. $$
+
+## 2.5 Parameters
+
+Individual distributions _within_ a family differ in having different values of
+the **parameters** of the distribution. The parameters determine the mean and
+variance of the distribution, values of probabilities from it etc.
+
+In the statistical analysis of a random variable $X$ we typically:
+
+- select a _family_ of distributions based on the basic characteristics of $X$
+- use observed data to choose (**estimate**) values for the parameters of the
+  distribution, and perform statistical inference on them.
+
+The **Bernoulli distribution** is the distribution of the outcome of a single
+Bernoulli trial, named after Jacob Bernoulli (1654-1705). This is the
+distribution of a random variable $X$ with the following **probability
+function**:[^2]
+
+[^2]:
+
+  A probability function is simply a function which returns the probability of a
+  particular value of $X$.
+
+$$
+P(X=x) = \left\{ \begin{array}{ll}
+\pi^x (1 - \pi)^{1-x}
+& \text{for } x = 0, 1 \\ 0 & \text{otherwise}.
+\end{array}\right.
+$$
+
+We could express this family of Bernoulli distributions in tabular for as
+follows:
+
+| $X = x$    |    $0$    |  $1$  |
+| :--------- | :-------: | :---: |
+| $P(X = x)$ | $1 - \pi$ | $\pi$ |
+
+where $0 \leq \pi \leq 1$ is the probability of 'success'. Note that just as a
+**sample space** represents all possible values of a random variable, a
+**parameter space** represents all possible values of a parameter.
+
+Such a random variable $X$ has a Bernoulli distribution with (probability)
+parameter $\pi$. This is often written as :
+
+$$ X \sim \text{Bernoulli}(\pi). $$
+
+If $X \sim \text{Bernoulli}(\pi)$, then we can determine its expected value,
+i.e. its mean, as the usual **probability-weighted average**:
+
+$$ E(X) = 0 \times (1 - \pi) + 1 \times \pi = \pi. $$
+
+Hence we can view $\pi$ as the long-run average (proportion) of successes if we
+were to draw a large random sample from this distribution.
+
+Different members of this family of distribution differ in terms of the value of
+$\pi$.
+
+## 2.6 The distribution zoo
+
+Suppose we carry out **n Bernoulli trials** such that:
+
+- at each trial, the probability of success is $\pi$
+- different trials are statistically independent events.
+
+Let $X$ denote the total number of successes in these $n$ trials, then $X$
+follows a **binomial distribution** with parameters $n$ and $pi$, where
+$n \geq 1$ is a known integer and $0 \leq \pi \leq 1$. This is often written as:
+
+$$ X \sim \text{Bin}(n, \pi). $$
+
+If $X \sim \text{Bin}(n, \pi)$, then:
+
+$$ E(X) = n \pi. $$
+
+In general, the **probability function** of $X \sim \text{Bin}(n, \pi)$ is:
+
+$$
+P(X = x) = \left\{ \begin{array}{ll}
+           \binom{n}{x} \pi^x (1 - \pi)^{n-x} & \text{for } x = 0,1,...,n \\
+           0 & \text{otherwise.} \end{array} \right.
+$$
+
+where $\binom{n}{x}$ is the **binomial coefficient** - in short, the number of
+ways of choosing $x$ objects out of $n$ when sampling without replacement when
+the order of the objects does not matter.
+
+$\binom{n}{x}$ can be calculated as:
+
+$$ \binom{n}{x} = \frac{n!}{x!(n-x)!} $$
+
+where $k! = k \times (k - 1) \times … \times 3 \times 2 \times 1$, for an
+integer $k > 0$. Also note that $0! = 1$.
