@@ -625,3 +625,26 @@ When summed over all the observations, positive and negative values of the
 
 Also, the smallest possible value of the sum of *squared* deviations $\sum_{i=1}^{n} (X_i - C)^2$
 for any constant $C$ is obtained when $C = \overline{X}$.
+
+## The sample median
+
+Let $X_{(1)}, X_{(2)}, ..., X_{(n)}$ denote the sample vales of $X$ when *ordered*
+from the smallest to the largest, known as the *order statistics*, such that:
+
+- $X_{(1)}$ is the smallest observed value (the *minimum*) of $X$
+- $X_{(n)}$ is the largest observed value (the *maximum*) of $X$.
+
+The **(sample) median**, **$q_{50}$**, of a variable $X$ is the value which is
+'in the middle' of the ordered sample.
+
+If $n$ is odd, then $q_{50} = X_{((n+1)/2)}$.
+
+If $n$ is even, then $q_{50} = (X_{(n/2)} + X_{(n/2 + 1)})/2$.
+
+## Sensitivity to outliers
+
+In general, the mean is affected much more than the median by outliers, i.e. unusually
+small or large observations.
+
+- For a positively-skewed distribution, the mean is larger than the median.
+- For a negatively-skewed distribution, the mean is 
