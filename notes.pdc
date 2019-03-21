@@ -1,6 +1,14 @@
-# Probability and Statistics
+---
+title: Probability and Statistics
+date: \today{}
+toc: true
+---
 
-## 1.1 The Monty Hall problem
+\thispagestyle{empty}
+\pagebreak
+\setcounter{page}{1}
+
+# 1.1 The Monty Hall problem
 
 The famous 'Monty Hall' problem is a classic example of **decision making under
 uncertainty**.
@@ -10,7 +18,7 @@ Upon revealing one of the doors you did not choose, you still face uncertainty -
 the only certainty is that the prize _must_ be behind one of the _two_ unopened
 doors.
 
-## 1.2 Decision making under uncertainty
+# 1.2 Decision making under uncertainty
 
 Decisions have to be taken in the present, with **uncertain future outcomes**.
 
@@ -36,9 +44,9 @@ For all decisions, we need to **determine the influencing factors** which could
 either be internal or external, then used to derive **expected results** or
 _consequences_.
 
-### _Qualitative_ analysis vs. _Quantitative_ analysis
+## _Qualitative_ analysis vs. _Quantitative_ analysis
 
-#### In a _qualitative_ analysis
+### In a _qualitative_ analysis
 
 - the management team 'qualitatively' evaluates how each factor could affect the
   decision.
@@ -55,7 +63,7 @@ However, a qualitative approach inevitably is **susceptible to judgement and
 hence biases** on the part of the decision-makers. 'Gut instinct' _can_ lead to
 good outcomes, but in the long run is far from optimal.
 
-#### In a _quantitative_ analysis
+### In a _quantitative_ analysis
 
 - the evaluation becomes a process of **using mathematics and statistical
   techniques**.
@@ -68,7 +76,7 @@ good outcomes, but in the long run is far from optimal.
 1.  Quantitatively express the expected results or consequences of the decision
     we are making.
 
-## 1.3 Uncertainty in the news
+# 1.3 Uncertainty in the news
 
 _News_ reports new **information about events** taking place in the world.
 
@@ -82,7 +90,7 @@ algorithmically**, with computers designed to scan the internet for news stories
 and interpret whether news reports contain any **useful information** which
 would allow a **revision of probabilistic beliefs**.
 
-## 1.4 Simplicity vs. Complexity - the need for models
+# 1.4 Simplicity vs. Complexity - the need for models
 
 **A model is a deliberate simplification of reality.** A good model retains the
 most important features of reality and ignores less important details. Broadly
@@ -99,7 +107,7 @@ determine whether or not a model is 'good', we must decide whether the benefit
 justifies the cost. **Resolving this benefit-cost trade-off is subjective** -
 further adding to life's complexities.
 
-## 1.5 Beware when model assumptions go wrong
+# 1.5 Beware when model assumptions go wrong
 
 To assist with the process of model building, we often make **assumptions** -
 usually _simplifying_ assumptions.
@@ -107,7 +115,7 @@ usually _simplifying_ assumptions.
 Beware assumptions - if you make a wrong or invalid assumption, then decisions
 you make in good faith may lead to outcomes far from what you expected.
 
-## 2.1 Probability principles
+# 2.1 Probability principles
 
 The first basic concepts in probability will be the following:
 
@@ -125,14 +133,14 @@ several _different_ **outcomes**. The **sample space** _S_ is the set of all
 possible outcomes of the experiment. An **event** is any subset _A_ of the
 sample space such that $A \subset S$, where $\subset$ denotes a subset.
 
-### Frequency interpretation of probability
+## Frequency interpretation of probability
 
 This states that the probability of an outcome A of an experiment is the
 proportion ( **relative frequency** ) of trials in which A would be the outcome
 if the experiment was repeated a very large number of times under similar
 conditions.
 
-### How to find probabilities
+## How to find probabilities
 
 A key question is how to determine appropriate numerical values, $P(A)$, for the
 probabilities of particular events.
@@ -154,7 +162,7 @@ basically applies the frequency definition to observed data.
 **The estimation of probabilities of events from observed data is an important
 part of statistics.**
 
-## 2.2 Simple probability distributions
+# 2.2 Simple probability distributions
 
 One can view probability as a quantifiable measure of one's degree of belief in
 particular **event**, or **set**, of interest.
@@ -165,7 +173,7 @@ to 1 inclusive. Hence the **probability of any event A**, say, is denoted
 $P(A) \in
 [0, 1]$, where '$\in$' means 'is a member of'.
 
-### Determining event probabilities for equally likely elementary outcomes
+## Determining event probabilities for equally likely elementary outcomes
 
 **Classical probability** is a simple special case where values of probabilities
 can be found by just counting outcomes. This requires that:
@@ -177,8 +185,10 @@ Suppose that the sample space $S$ contains $N$ equally likely outcomes, and that
 event A consists of $n \leq N$ of these outcomes. We then have that:
 
 $$
-P(A) = \frac{n}{N} = \frac{\text{number of outcomes in }A}
-{\text{total number of outcomes in the sample space }S}.$$
+P(A) = \frac{n}{N}
+= \frac{\text{number of outcomes in }A}
+{\text{total number of outcomes in the sample space }S}.
+$$
 
 That is, the probability of $A$ is the **proportion** of outcomes which belong
 to $A$ out of all possible outcomes.
@@ -187,7 +197,7 @@ In the classical case, the probability of any event can be determined by
 counting the number of outcomes which belong to the event, and the total number
 of possible outcomes.
 
-### Random variables
+## Random variables
 
 A **random variable** is a 'mapping' of the elementary outcomes in the sample
 space to real numbers. This allows us to attach probabilities to the
@@ -195,7 +205,7 @@ experimental outcomes. Hence the concept of a random variable is that of a
 measurement which takes a particular value for each possible trial(experiment).
 Frequently, this will be a numerical value.
 
-### Probability distribution
+## Probability distribution
 
 Be aware that random variables comes in two varieties - discrete and continuous.
 
@@ -209,18 +219,21 @@ For notational efficiency reasons, we often use a _capital_ letter to represent
 the random variable. In contrast, a _lower case_ letter denotes a particular
 _value_ of the random variable.
 
-## 2.3 Expectation of random variables
+# 2.3 Expectation of random variables
 
 If $x_1, x_2, …, x_N$ are the possible values of the random variable $X$, with
 corresponding probabilities $p(x_1), p(x_2), …, p(x_N)$, then:
 
-$$ E(X) = \mu = \sum_{i=1}^{N} x_i p(x_i) = x_1 p_(x_1) + x_2 p(x_2) + … + x_N p(x_N). $$
+$$
+E(X) = \mu = \sum_{i=1}^{N} x_i p(x_i)
+= x_1 p_(x_1) + x_2 p(x_2) + … + x_N p(x_N).
+$$
 
 Note that the expected value is also referred to as the **population mean**,
 which can be written as $E(X)$ (in words 'the expectation of the random variable
 X') or $\mu$ (in words 'the (population) mean of X').
 
-### Expected value versus sample mean
+## Expected value versus sample mean
 
 The mean (expected value) $E(X)$ of a probability distribution is analogous to
 the sample mean (average) $\overline{X}$ of a sample distribution.
@@ -230,22 +243,26 @@ their **frequencies** in a random sample are $f_1, …, f_K$, respectively.
 Therefore, the sample mean of $X$ is:
 
 $$
-\hat{p}(x_1) + … + x_K \hat{p}(x_K) = \sum\*{i=1}^K x_i \hat{p}(x_i) \$\$
+\overline{X} = \frac{f_1 x_1 + … + f_K x_K}{f_1 + … + f_K}
+= x_1 \hat{p}(x_1) + … + x_K \hat{p}(x_K)
+= \sum_{i=1}^K x_i \hat{p}(x_i)
+$$
 
 where:
-$$
+
+$$ \hat{p}(x_i) = \frac{f_i}{\sum_{i=1}^K f_i} $$ 
 
 are the **sample proportions** of the values $x_i$. The expected value of the
 random variable $X$ is:
 
-$$
 So $\overline{X}$ uses sample proportions, $\hat{p}(x_i)$, whereas $E(X)$ uses
 the population probabilities, $p(x_i)$.
 
-## 2.4 Bayesian updating
+# 2.4 Bayesian updating
 
 **Bayes' theorem**:
-$$
+
+$$ P(A|B) = \frac{P(B|A)P(A)}{P(B)}. $$
 
 $P(A)$ is a _priori_, $P(A|B)$ is the **Bayesian updated probability** (known as
 a **conditional probability** or a _posteriori_ probability), where '|' can be
@@ -267,7 +284,7 @@ and for some event $A$, then:
 
 $$ P(B*k|A) = \frac{P(A|B_k)P(B_k)}{\sum*{i=1}^n P(A|B_i)P(B_i)}. $$
 
-## 2.5 Parameters
+# 2.5 Parameters
 
 Individual distributions _within_ a family differ in having different values of
 the **parameters** of the distribution. The parameters determine the mean and
@@ -290,7 +307,11 @@ function**:[^2]
   particular value of $X$.
 
 $$
-1 \\ 0 & \text{otherwise}. \end{array}\right. $$
+P(X=x) = \left\{ \begin{array}{ll}
+\pi^x (1 - \pi)^{1-x}
+& \text{for } x = 0, 1 \\ 0 & \text{otherwise}.
+\end{array}\right.
+$$
 
 We could express this family of Bernoulli distributions in tabular for as
 follows:
@@ -305,7 +326,8 @@ where $0 \leq \pi \leq 1$ is the probability of 'success'. Note that just as a
 
 Such a random variable $X$ has a Bernoulli distribution with (probability)
 parameter $\pi$. This is often written as :
-$$
+
+$$ X \sim \text{Bernoulli}(\pi). $$
 
 If $X \sim \text{Bernoulli}(\pi)$, then we can determine its expected value,
 i.e. its mean, as the usual **probability-weighted average**:
@@ -318,7 +340,7 @@ were to draw a large random sample from this distribution.
 Different members of this family of distribution differ in terms of the value of
 $\pi$.
 
-## 2.6 The distribution zoo
+# 2.6 The distribution zoo
 
 Suppose we carry out **$n$ Bernoulli trials** such that:
 
@@ -339,31 +361,36 @@ $$ E(X) = n \pi. $$
 In general, the **probability function** of $X \sim \text{Bin}(n, \pi)$ is:
 
 $$
-\text{for } x = 0,1,...,n \\ 0 & \text{otherwise.} \end{array} \right. $$
+P(X = x) = \left\{ \begin{array}{ll}
+\binom{n}{x} \pi^x (1 - \pi)^{n-x} & \text{for } x = 0,1,...,n \\
+0 & \text{otherwise.} \end{array} \right.
+$$
 
 where $\binom{n}{x}$ is the **binomial coefficient** - in short, the number of
 ways of choosing $x$ objects out of $n$ when sampling without replacement when
 the order of the objects does not matter.
 
 $\binom{n}{x}$ can be calculated as:
-$$
+
+$$ \binom{n}{x} = \frac{n!}{x!(n-x)!} $$
 
 where $k! = k \times (k - 1) \times … \times 3 \times 2 \times 1$, for an
 integer $k > 0$. Also note that $0! = 1$.
 
-### Poisson distribution
+## Poisson distribution
 
 The possible values of the **Poisson distribution** are the non-negative
 integers 0, 1, 2, ...
 
 The **probability function** of the Poisson distribution is:
 
-$$
+$$ P(X = x) = \left\{ \begin{array}{ll} e^{-\lambda}\lambda^{x}/x! & \text{for
 }x = 0,1,2,... \\ 0 & \text{otherwise} \end{array} \right. $$
 
-where $\lambda > 0$ is a parameter, $e$ is the exponential constant ($\e \approx
-2.71828) and $x!$ is **'$x$ factorial'**, defined earlier as:
-$$
+where $\lambda > 0$ is a parameter, $e$ is the exponential constant (ections --pdf-engine=xelatex -V CJKmainfont:'Source Han Serif SC'ue \approx
+2.71828$) and $x!$ is **'$x$ factorial'**, defined earlier as:
+
+$$ x! = x \times x - 1 \times x - 2 \times … \times 3 \times 2 \times 1. $$
 
 If a random variable $X$ has a Poisson distribution with parameter $\lambda$,
 this is often denoted by:
@@ -399,7 +426,7 @@ $X \sim
 The single parameter $\lambda$ of the Poisson distribution is, therefore, the
 $rate$ of occurrences per unit of time.
 
-### Connections between probability distributions
+## Connections between probability distributions
 
 There are close connections between some probability distributions, even across
 different families of them:
@@ -409,7 +436,7 @@ different families of them:
 - **approximate** (or **asymptotic**): one is closely approximated by another
   under some limiting conditions.
 
-### Poisson approximation of the binomial distribution
+## Poisson approximation of the binomial distribution
 
 Suppose that:
 
@@ -428,7 +455,7 @@ in such a way that $n
 This **'law of small numbers'** provides another motivation for the Poisson
 distribution.
 
-## 3.1 Classify your variables
+# 3.1 Classify your variables
 
 **Measurable variable**: there is a generally recognised method of determining
 its value. The numbers which we then obtain come ready-equipped with an order
@@ -441,7 +468,7 @@ types:
 1. **Discrete** data: things you can _count_.
 1. **Continuous** data: things you can _measure_.
 
-### Categorical vs. Measurable variables
+## Categorical vs. Measurable variables
 
 - **Measurable variables**
 - **Categorical variables**
@@ -449,7 +476,7 @@ types:
   - **ordinal** (categorical) variables: can be put in some sensible order.
   - **nominal** (categorical) variables: cannot be put in any sensible order.
 
-### Nominal categorical variables
+## Nominal categorical variables
 
 The numbers (values) serve only as labels or tags for identifying and
 classifying cases. When used for **identification**, there is a strict
@@ -461,7 +488,7 @@ Statistics:
 
 - based on frequency counts, such as percentages and the mode
 
-### Ordinal categorical variables
+## Ordinal categorical variables
 
 An ordinal variable has a **ranking scale** in which numbers are assigned to
 cases to indicate the relative extent to which the cases possess some
@@ -476,7 +503,7 @@ Statistics:
 - based on frequency counts, such as percentages and the mode
 - based on centiles, such as percentiles, quartiles and the median
 
-### Interval measurable variables
+## Interval measurable variables
 
 Interval-level variables have scales where numerically equal distances on the
 scale represent equal value differences in the characteristic being measured.
@@ -493,7 +520,7 @@ Statistics:
 - based on centiles, such as percentiles, quartiles and the median
 - in addition statistics, such as the mean and standard deviation
 
-### Ratio measurable variables
+## Ratio measurable variables
 
 Ratio-level variable possess all the properties of nominal, ordinal and interval
 variables. A ratio variable has an absolute zero point and it is meaningful to
@@ -504,7 +531,7 @@ positive constant, are allowed.
 
 All statistical techniques can be applied to ratio data.
 
-## 3.2 Data visualisation
+# 3.2 Data visualisation
 
 Statistical analysis may have two broad aims.
 
@@ -530,3 +557,41 @@ $n$. Here, $n = 155$ countries.
 _Columns_ of the data matrix correspond to **variables**, i.e. different
 characteristics of the units. Here, region, the level of democracy, and GDP per
 capita are the variables.
+
+## Sample distribution
+
+The **sample distribution** of a variable consists of:
+
+- a list of the values of the variable which are observed in the sample
+- the number of times each value occurs (the *counts* or *frequencies* of the observed values).
+
+**Frequency table**(when the number of different observed values is small):
+show the whole sample distribution of all the values and their frequencies.
+
+**Bar chart**: the graphical equivalent of the table of frequencies.
+
+**Histogram**(most common graph for a variable which has many distinct values):
+is like a bar chart, but without gaps between bars, and often uses more bars
+(intervals of values) than is sensible in a table.
+
+## Associations between two variables
+
+An **association** between the variables: whether some values of one variable
+tend to occur frequently together with particular values of another.
+
+Some common methods of descriptive statistics for two-variables associations:
+
+- 'Many' versus 'many': scatterplots.
+- 'Few' versus 'many': side-by-side boxplots.
+- 'Few' versus 'few': two-way contingency tables (cross-tabulations).
+
+A **scatterplots** shows the values of two *measurable* variables against each other, plotted
+as points in a two-dimensional coordinate system.
+
+**Boxplots** are useful for *comparisons* of how the distribution of how the distribution
+of a measurabel variable varies across different groups, i.e. across different
+levels of a categorical variable.
+
+A (two-way) **contingency table** (or **cross-tabulation**) shows the frequencies
+in the sample of each possible *combination* of the values of two categorical variables.
+Such tables often show the percentages within each *row* or *column* of the table.
