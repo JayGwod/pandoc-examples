@@ -595,3 +595,33 @@ levels of a categorical variable.
 A (two-way) **contingency table** (or **cross-tabulation**) shows the frequencies
 in the sample of each possible *combination* of the values of two categorical variables.
 Such tables often show the percentages within each *row* or *column* of the table.
+
+# 3.3 Descriptive statistics - measures of central tendency
+
+**Summary (descriptive) statistics**: summarise (describe) *one* feature of the sample
+distribution in a single number.
+
+**Measures of central tendency**: where is the 'centre' or 'average' of the distribution.
+
+- **mean (i.e. the average, sample mean or arithmetic mean)**
+- **median**
+- **mode**
+
+## Notation for variables
+
+In formulae, a generic variable is denoted by a single letter. A letter with a
+subscript denotes a single observation of a variable.
+
+## The sample mean
+
+$$ \overline{X} = \frac{\sum_{i=1}^{n} X_i}{n} = \frac{1}{n} \sum_{i=1}^{n} X_i. $$
+
+## Why is the mean a good summary of the central tendency?
+
+$$ \sum_{i=1}^{n} (X_i - \overline{X}) = 0. $$
+
+When summed over all the observations, positive and negative values of the
+**deviations** $X_i - \overline{X}$ cancel out.
+
+Also, the smallest possible value of the sum of *squared* deviations $\sum_{i=1}^{n} (X_i - C)^2$
+for any constant $C$ is obtained when $C = \overline{X}$.
