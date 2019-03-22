@@ -2,9 +2,9 @@
 title: Probability and Statistics
 date: \today{}
 toc: true
+documentclass: extarticle
 ---
 
-\thispagestyle{empty}
 \pagebreak
 \setcounter{page}{1}
 
@@ -657,5 +657,104 @@ appears most often) in the data.
 
 A variable can have several modes (i.e. be multimodal). The mode is the only measure
 of central tendency which can be used even when the values of a variable have no ordering.
+
+# 3.4 Descriptive statistics - measures of spread
+
+## Variance and standard deviation
+
+The first measures of **dispersion**, the **sample variance** and its square root,
+the **sample standard deviation**, are based on $(X_i - \overline{X})^2$, i.e. the squared deviations from the mean.
+
+The sample variance of a variable X, denoted $S^2$ (or $S_X^2$), is defined as:
+
+$$ S^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \overline{X})^2. $$
+
+The sample standard deviation of $X$, denoted $S$ (or $S_X$), is the positive square
+root of the sample variance:
+
+$$ S = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (X_i - \overline{X})^2}. $$
+
+A useful rule-of-thumb for interpretation is that for many symmetric distribution,
+such as the 'normal' distribution:
+
+- about 2/3 of the observations are between $\overline{X}-S$ and $\overline{X}+S$,
+  within one (sample) standard deviation about the (sample) mean
+- about 95% of the observations are between $\overline{X}-2 \times S$ and
+  $\overline{X} + 2 \times S$, that is, within two (sample) standard deviations
+  about the (sample) mean.
+
+## Sample quantiles
+
+The median, $q_{50}$, is basically the value which divides the sample into the smallest
+50% of observations and the largest 50%. If we consider other percentage splits,
+we get other (sample) **quantiles (percentiles)**, $q_c$. Some special quantiles
+are given below.
+
+- The **first quartile**, $q_{25}$ or $Q_1$, is the value which divides the sample
+  into the smallest 25% of observations and the largest 75%.
+- The **third quartile**, $q_{75}$ or $Q_{3}$, gives the 75%-25% split.
+- The extremes in this spirit are the **minimum**, $X_{(1)}$ (the '0% quantile',
+  to speak), and the **maximum**, $X_{(n)}$ (the '100% quantile').
+- **range**: $X_{(n)} - X_{(1)} = \text{maximum} - \text{minimum}$
+- **interquartile range (IQR)**: $\text{IQR} = q_{75} - q_{25} = Q_3 - Q_1$.
+
+Sensitivity | Range | IQR
+:---|---:|---:
+Outliers| $\checkmark$| $\times$
+
+## Boxplots
+
+A **boxplot** (in full, a box-and-whiskers plot) summarises some key features of
+a sample distribution using quantiles. The plot is comprised of the following.
+
+- The line inside the box, which is the median.
+- The box, whose edges are the first and third quartiles ($Q_1$ and $Q_3$). Hence
+  the box captures the middle 50% of the data. Therefore, the length of the box
+  is the interquartile range.
+- The bottom whisker extends either to the minimum or up to a length of 1.5 times
+  the interquartile range below the first quartile, whichever is closer to the
+  first quartile.
+- The top whisker extends either to the maximum or up to a length of 1.5 times
+  the interquartile range above the third quartile, whichever is closer to the
+  third quartile.
+- Points beyond 1.5 times the interquartile range below the first quartile or
+  above the third quartile are regarded as outliers, and plotted as individual
+  points.
+
+A much longer whisker (and/or outliers) in one direction relative to the other indicates
+a skewed distribution, as does a median line not in the middle of the box. The boxplot
+below is of GDP per capita using the sample of 155 counties.
+
+![The boxplot of GDP per capita using the sample of 155 countries](https://ws2.sinaimg.cn/large/006tKfTcly1g1bvlkqhgej31ak0u07aw.jpg)
+
+# 3.5 The normal distribution
+
+The **normal distribution** is by far the most important probability distribution in statistics.
+This is for three broad reason.
+
+- Many variables have distributions which are *approximately* normal
+- The normal distribution has extremely convenient mathematical properties, which
+  make it a useful default choice of distribution in many contexts.
+- Even when a variable is not itself even approximately normally distributed,
+  functions of several observations of the variable('sampling distributions')
+  are often approximately normal, due to the **central limit theorem**. Because
+  of this, the normal distribution has a crucial role in statistical inference.
+
+The equation of the normal distribution curve is:
+
+$$ f(x) = \frac{1}{\sqrt{2 \pi \sigma ^2}} \exp \left[ -\frac{(x - \mu)^2}{2 \sigma ^2} \right] \quad \text{for } - \infty < x < \infty $$
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
