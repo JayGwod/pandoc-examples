@@ -647,4 +647,15 @@ In general, the mean is affected much more than the median by outliers, i.e. unu
 small or large observations.
 
 - For a positively-skewed distribution, the mean is larger than the median.
-- For a negatively-skewed distribution, the mean is 
+- For a negatively-skewed distribution, the mean is smaller than the median.
+- For an exactly symmetric distribution, the mean and median are equal.
+
+## The sample mode
+
+The **(sample) mode** of a variable is the value which has the highest frequency (i.e.
+appears most often) in the data.
+
+A variable can have several modes (i.e. be multimodal). The mode is the only measure
+of central tendency which can be used even when the values of a variable have no ordering.
+
+
