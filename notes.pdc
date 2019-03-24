@@ -744,17 +744,111 @@ The equation of the normal distribution curve is:
 
 $$ f(x) = \frac{1}{\sqrt{2 \pi \sigma ^2}} \exp \left[ -\frac{(x - \mu)^2}{2 \sigma ^2} \right] \quad \text{for } - \infty < x < \infty $$
 
+where $\pi$ is the mathematical constant (i.e. $\pi=3.14159...$), and $\pi$ and
+$\sigma^2$ are parameters, with $- \infty < \mu < \infty $ and $\sigma^2 > 0$.
 
+A random variable $X$ with this function is said to have a normal distribution with
+a mean of $\mu$ and a variance of $\sigma^2$, denoted $X \sim N(\mu, \sigma^2)$. The mean can also be inferred
+from the observation that the normal distribution is *symmetric* about $\mu$, which also
+implies that the median of the normal distribution is $\mu$.
 
+- **The mean $\mu$ determines the location of the curve.**
+- **The variance $\sigma^2$ determines the dispersion (spread) of the curve.**
 
+The figure below shows three normal distributions with different means and/or
+variances.
 
+![three normal distributions with different means and/or variances.](https://ws3.sinaimg.cn/large/006tKfTcly1g1e54d9n31j30vw0u0jvq.jpg)
 
+## Linear transformation of the normal distribution
 
+If $X$ is *normally* distributed, then so is the $\text{linear transformation } Y = aX + b$, where $a$
+and $b$ are constants. In other words, if $X \sim N(\mu, \sigma^2)$, then:
 
+$$ Y = aX + b \sim N(a\mu + b, a^2\sigma^2). $$
 
+This type of result is *not* true in general. For other families of distributions, the distribution
+of $Y = aX + b$ is *not always* in the same family as $X$.
 
+The transformed variable $Z = (X - \mu)/\sigma$ is known as a **standardised variable** of a **z-score**.
 
+The distribution of the $z$-score is $N(0, 1)$, i.e. the normal distribution with mean $\mu = 0$ and
+variance $\sigma^2 = 1$ (and, therefore, a standard deviation of $\sigma = 1$). This is known
+as the **standard normal distribution**.
 
+The figure below shows tail probabilities for the standard normal distribution. The shaded areas
+are $P(Z \leq -z) = P(Z \geq z)$, by symmetry of the distribution about zero.
 
+![tail probabilities for the standard normal distribution](https://ws1.sinaimg.cn/large/006tKfTcly1g1e644pq2xj30vl0u0gob.jpg)
 
+# 3.6 Variance of random variables
 
+We distinguished between two different types of variance:
+
+- the **sample variance**, $S^2$, which is a measure of the dispersion in a sample dataset
+- the **population variance**, $\text{var}(X) = \sigma^2$, which reflects the variance
+  of the whole population, i.e. the variance of a probability distribution.
+
+The **dispersion of a (discrete) probability distribution**:
+
+$$ \sigma^2 = \text{Var}(X) = \text{E}((X - \mu)^2) = \sum_{i=1}^N (x_i - \mu)^2p(x_i) $$
+
+$$ P(a < X \leq b) = P(\frac{a - \mu}{\sigma} < \frac{X - \mu}{\sigma} \leq \frac{b - \mu}{\sigma})
+= P(\frac{a - \mu}{\sigma} < Z \leq \frac{b - \mu}{\sigma}) \\
+= \Phi(\frac{b - \mu}{\sigma}) - \Phi(\frac{a - \mu}{\sigma}) $$
+
+where $\Phi (k) = P(Z \leq k)$ for some value $k$ and is known as a cumulative probability.
+This process is known as **standardisation**.
+
+## Some probabilities around the mean
+
+![Some probabilities around the mean](https://ws1.sinaimg.cn/large/006tKfTcly1g1e9p1p3yfj30xo0u041a.jpg)
+
+$$ P(-1 \leq Z \leq 1) \approx 0.683 $$
+$$ P(-2 \leq Z \leq 2) \approx 0.950 $$
+$$ P(-3 \leq Z \leq 3) \approx 0.997 $$
+
+Hence, on a standardised basis, it is very easy to determine whether a value is
+'extreme', as only 5% of the time would a standardised value be expected to be
+beyond $\pm 2$ (which we could classify as an **outlier**), and only 0.3% of the
+time beyond $\pm 3$ (which we could classify as an **extreme outlier**). Values
+beyond four standard deviations from the mean (i.e. beyond $\pm 4$ on a
+standardised scale) could be considered as **black swan events**.
+
+# 4.1 Introduction to sampling
+
+Sampling is a key component of any research design. The key to the use of statistics
+is being able to take data from a sample and make inferences about about a large
+population. This idea is depicted below.
+
+![take data from a sample and make inferences about a large population](https://ws2.sinaimg.cn/large/006tKfTcly1g1eb8ych42j314i0ngakc.jpg)
+
+## Sample or census?
+
+- **Population** - The aggregate of all the elements, sharing some common set of
+  characteristics, which comprise the universe for the purpose of the problem being
+  investigated.
+- **Census** - A complete enumeration of the elements of a population or study objects.
+- **Sample** - A subgroup of the elements of the population selected for participation in the study.
+
+Whether a sample of a census?
+
+- A census is very costly.
+- A sample is far quicker to collect.
+- If the population is small, it is feasible to conduct a census.
+- If the variance is large, a census would be more appropriate.
+- A census would appeal more if the consequences of making sampling errors are extreme.
+- If non-sampling errors are costly then a sample is better.
+- Measuring sampled elements may result in the destruction of the object.
+- If we want to focus on detail, then time and budget constraints would favour a sample.
+
+Factors | Sample | Census
+:--- | :---: | :---:
+Budget | Small | Large
+Time available | Short | Long
+Population size | Large | Small
+Variance of the characteristic | Small | Large
+Cost of sampling errors | Low | High
+Cost of non-sampling errors | High | Low
+Nature of measurement | Destructive | Non-destructive
+Attention to individual cases | Yes | No
