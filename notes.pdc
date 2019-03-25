@@ -1101,3 +1101,33 @@ $$ \text{Var}(\overline{X}) = \frac{N - n}{N - 1} \times \frac{\sigma^2}{n}. $$
 
 We use the term **standard error** to refer to the standard deviation of the
 sampling distribution, so:
+
+$$ \text{S.E.}(\overline{X})= \sqrt{\text{Var}(\overline{X})}= \sqrt{\frac{N-n}{N-1}\times\frac{\sigma^2}{n}} = \sigma_\overline{X}. $$
+
+Some implications are the following.
+
+- As the sample size $n$ increases, the sampling variance decreases, i.e. the
+  **precision** increases. [^3]
+- Provided the **sampling fraction**, $n/N$, is small, the term:
+  $$ \frac{N-n}{N-1} \approx 1 $$
+  so can be ignored. Therefore, the precision depends effectively on $n$ only.
+
+[^3]:
+  Although greater precision is desirable, data collection costs will rise
+  with $n$. Remember why we sample in the first place!
+
+When sampling *without replacement*, increasing $n$ must increase precision since less of the
+population is left out. In much practical sampling $N$ is *very* large (for example, several million),
+while $n$ is comparably small (at most 1,000, say).
+
+Therefore, in such cases the factor $(N - n)/(N - 1)$ is close to 1, hence:
+
+$$ \text{Var}(\overline{X})= \frac{N-n}{N-1}\times\frac{\sigma^2}{n} \approx \frac{\sigma^2}{n} = \frac{\text{Var}(X)}{n} $$
+
+for small $n/N$. When $N$ is large, it is the sample size $n$ which is important
+in determining precision, *not* the sampling fraction.
+
+## Sampling from the normal distribution
+
+When the distribution of $X$ is *normal*, the sampling distribution of $\overline{X}$
+is also normal.
