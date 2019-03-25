@@ -842,6 +842,10 @@ Whether a sample of a census?
 - Measuring sampled elements may result in the destruction of the object.
 - If we want to focus on detail, then time and budget constraints would favour a sample.
 
+The conditions which favour the use of a sample or census are summarised in the
+table below. Of course, in practice, some of our factors may favour a sample while
+others favour a census, in which case a balanced judgement is required.
+
 Factors | Sample | Census
 :--- | :---: | :---:
 Budget | Small | Large
@@ -852,3 +856,172 @@ Cost of sampling errors | Low | High
 Cost of non-sampling errors | High | Low
 Nature of measurement | Destructive | Non-destructive
 Attention to individual cases | Yes | No
+
+## Classification of sampling techniques
+
+**Target population**: the collection of elements or objects which possess the information
+sought by the researcher and about which inferences are to be made.
+
+Sampling techniques:
+
+- **non-probability sampling techniques**
+- **probability sampling techniques**
+
+## Non-probability sampling techniques
+
+Some units in the population do not have a chance of selection in the sample,
+other individual units in the population have an *unknown probability of being selected*.
+There is also an inability to measure sampling error.
+
+### Convenience sampling
+
+Convenience sampling attempts to obtain a sample of convenient elements (hence the name!).
+Often, respondents are selected because they happen to be in the right place at the
+right time.
+
+### Judgemental sampling
+
+The population elements are selected based on the judgement of the researcher.
+
+### Quota sampling
+
+Quota sampling may be viewed as two-stage restricted judgemental sampling:
+
+- The fist stage: develop control categories, or **quota controls**, of population elements.
+- The second stage: select sample elements based on convenience or judgement.
+
+### Snowball sampling
+
+In snowball sampling an initial group of respondents is selected, usually at random.
+After being interviewed, these respondents are asked to identify others who belong
+to the target population of interest. Subsequent respondents are selected based on
+these referrals.
+
+Types | Strengths | Weaknesses
+:---| :---: | :---:
+Convenience sampling | cheapest, quickest and most convenient | selecition bias and lack of a representative sample
+Judgemental sampling | low cost, convenient, not particularly time-consuming and good for 'exploratiry' research designs | not allow generalisations and is subjevtive due to the judgement of the researcher
+Quota sampling | can controll a sample for certain characteristics | it suffers from selection bias and there is no guarantee of representativeness of the sample
+Snowball sampling | increase the chance of locating the desired characteristic in the population | time-consuming
+
+# 4.2 Random sampling
+
+**Sample surveys** (hereafter 'surveys') are how new data are collected on a
+population and tend to be based on samples rather than a census.
+
+Sampling error will occur (since not all population units are observed). However,
+non-sampling error should be less since resources can be used to ensure high quality
+interviews or to check completed questionnaires.
+
+## Types of error
+
+- **Sampling error** occurs as a result of us selecting a sample, rather than performing
+  a census.
+  - random variation due to the sampling scheme used.
+  - For probability sampling, we can estimate the statistical properties of the
+    sampling error.
+- **Non-sampling error**: a result of (inevitable) failures of the sampling scheme.
+  - **Selection bias**:
+    1. the sampling frame not being equal to the target population
+    1. in cases where the sampling scheme is not strictly adhered to
+    1 .non-response bias
+  - **Response bias**: wrong measurements or interviewer bias.
+
+Both kinds of error can be controlled or allowed for more effectively by a
+**pilot survey**. A pilot survey is used:
+
+- to find the standard error
+- to sort out non-sampling questions
+
+## Probability sampling
+
+Probability sampling techniques mean every population element has a known,
+non-zero probability of being selected in the sample. Probability sampling makes
+it possible to estimate the margins of sampling error, therefore all statistical
+techniques can be applied.
+
+In order to perform probability sampling, we need a **sampling frame** which is
+a list of all population elements. However, we need to consider whether the sampling
+frame is:
+
+1. adequate (does it represent the target population?)
+1. complete (are there any missing units, or duplications?)
+1. accurate (are we researching dynamic populations?)
+1. convenient (is the sampling frame readily accessible?)
+
+## Simple random sampling (SRS)
+
+In a simple random sample each element in the population has a known and equal
+probability of selection. This implies that every element is selected *independently*
+of every other element.
+
+SRS is simple to understand and results are readily projectable. However, there
+may be difficulty constructing the sampling frame, lower precision (relative to
+other probability sampling methods) and there is no guarantee of sample representativeness.
+
+# 4.3 Further random sampling
+
+## Systematic sampling
+
+In systematic sampling, the sample is chose by selecting a *random* starting point
+and then picking every $i$th element in succession from the sampling frame. The
+**sampling interval**, $i$, is determined by dividing the population size, $N$,
+by the sample size, $n$, and rounding to the nearest integer.
+
+When the *ordering of the elements* is related to the characteristic of interest,
+systematic sampling *increase the representativeness of the sample*. If the ordering
+of the elements produces a **cyclical pattern**, systematic sampling may actually
+*decrease the representativeness of the sample*. It is easier to implement relative
+to SRS.
+
+## Stratified sampling
+
+Stratified sampling is a two-step process in which the population is
+partitioned (divided up) into subpopulations known as **strata** ('Strata' is the
+plural of 'stratum').
+
+The strata should be mutually exclusive and collectively exhaustive in that every
+population element should be assigned to one and only one stratum and no
+population elements should be omitted. Next, elements are selected from each
+stratum by a random procedure, usually SRS.
+
+A major objective of stratified sampling is to increase the precision of
+statistical inference without increasing cost.
+
+The elements *within a stratum* should be as *homogeneous* as possible (i.e. as
+similar as possible), but the elements between strata should be *as heterogeneous*
+as possible (i.e. as different as possible). The **stratification factors** should
+also be closely related to the characteristic of interest.
+
+Finally, the factors (variables) should decrease the cost of the stratification
+process by being easy to measure and apply.
+
+In **proportionate stratified sampling**, the size of the sample drawn from each
+stratum is proportional to the relative size of that stratum in the total
+population. In **disproportionate (optimal) stratified sampling**, the size of the
+sample from each stratum is proportional to the relative size of that stratum
+*and* to the standard deviation of the distribution of the characteristic of
+interest among all the elements in that stratum.
+
+Stratified sampling includes all important subpopulations and ensures a high
+level of precision. However, sometimes it might be difficult to select relevant
+stratification factors and the stratification process itself might not be
+feasible in practice if it was not known to which stratum each population element belonged.
+
+## Cluster sampling
+
+In cluster sampling the target population is first divided into mutually
+exclusive and collectively exhaustive subpopulations known as **clusters.**
+A random sample of clusters is then selected, based on a probability sampling
+technique such as SRS. For each selected cluster, either *all* the elements are
+included in the sample (one-stage cluster sampling), or a *sample* of elements is
+drawn probabilistically (two-stage cluster sampling).
+
+Elements within a cluster should be as heterogeneous as possible, but clusters themselves should be as homogeneous as possible. Ideally, each cluster should be a small-scale representation of the population. In probability proportionate to size sampling, the clusters are sampled with probability proportional to size. In the second stage, the probability of selecting a sampling unit in a selected cluster varies inversely with the size of the cluster.
+
+Cluster sampling is easy to implement and cost effective. However, the technique suffers from a lack of precision and it can be difficult to compute and interpret results.
+
+## Multistage sampling
+
+In multistage sampling selection is performed at two or more successive stages. This technique is often adopted in large surveys. At the first stage, large ‘compound’ units are sampled (primary units), and several sampling stages of this type may be performed until we at last sample the basic units.
+The technique is commonly used in cluster sampling so that we are at first sampling the main clusters, and then clusters within clusters etc. We can also use multistage sampling with mixed techniques, i.e. cluster sampling at Stage 1 and stratified sampling at Stage 2 etc.
