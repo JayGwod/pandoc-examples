@@ -1017,11 +1017,87 @@ technique such as SRS. For each selected cluster, either *all* the elements are
 included in the sample (one-stage cluster sampling), or a *sample* of elements is
 drawn probabilistically (two-stage cluster sampling).
 
-Elements within a cluster should be as heterogeneous as possible, but clusters themselves should be as homogeneous as possible. Ideally, each cluster should be a small-scale representation of the population. In probability proportionate to size sampling, the clusters are sampled with probability proportional to size. In the second stage, the probability of selecting a sampling unit in a selected cluster varies inversely with the size of the cluster.
+Elements *within* a cluster should be as *heterogeneous* as possible, but
+clusters themselves should be as *homogeneous* as possible. Ideally, each
+cluster should be a small-scale representation of the population. In **probability
+proportionate to size sampling**, the clusters are sampled with probability
+proportional to size. In the second stage, the probability of selecting a
+sampling unit in a selected cluster varies inversely with the size of the cluster.
 
-Cluster sampling is easy to implement and cost effective. However, the technique suffers from a lack of precision and it can be difficult to compute and interpret results.
+Cluster sampling is easy to implement and cost effective. However, the technique
+suffers from a lack of precision and it can be difficult to compute and interpret results.
 
 ## Multistage sampling
 
-In multistage sampling selection is performed at two or more successive stages. This technique is often adopted in large surveys. At the first stage, large ‘compound’ units are sampled (primary units), and several sampling stages of this type may be performed until we at last sample the basic units.
-The technique is commonly used in cluster sampling so that we are at first sampling the main clusters, and then clusters within clusters etc. We can also use multistage sampling with mixed techniques, i.e. cluster sampling at Stage 1 and stratified sampling at Stage 2 etc.
+In multistage sampling selection is performed at two or more successive stages.
+This technique is often adopted in large surveys. At the first stage, large
+'compound' units are sampled (**primary units**), and several sampling stages of
+this type may be performed until we at last sample the basic units.
+
+The technique is commonly used in cluster sampling so that we are at first
+sampling the main clusters, and then clusters within clusters etc. We can also
+use multistage sampling with mixed techniques, i.e. cluster sampling at Stage 1
+and stratified sampling at Stage 2 etc.
+
+# 4.4 Sampling distributions
+
+A **simple random sample** is a sample selected by a process where every
+possible sample (of the same size, $n$) has the same probability of selection.
+The selection process is left to chance, therefore eliminating the effect of
+**selection bias**. Due to the random selection mechanism, we do not know (in advance)
+which sample will occur. Every population element has a known, non-zero
+probability of selection in the sample, but no element is certain to appear.
+
+A population has particular characteristics of interest such as the mean, $\mu$,
+and variance, $\sigma^2$. Collectively, we refer to these characteristics as
+**parameters**. If we do not have population data, the parameter values will be
+*unknown*.
+
+'Statistical inference' is the process of estimating the (unknown) parameter
+values using the (known) sample data.
+
+We use a statistic (called an **estimator**) calculated from sample observations
+to provide a **point estimate** of a parameter.
+
+A **frequency distribution**: That is, we record the frequency of each possible
+value of $\overline{x}$.
+
+This is known as the **sampling distribution** of $\overline{X}$. The sampling
+distribution is a central and vital concept in statistics. It can be used to
+evaluate how 'good' an estimator is. Specifically, we care about how 'close' the
+estimator is to the population parameter of interest.
+
+$\overline{X}$ (which is a random variable) is our estimator of $\mu$, and the
+observed value of $\overline{X}$, denoted $\overline{x}$, is a point estimate.
+
+# 4.5 Sampling distribution of the sample mean
+
+An important difference between a sampling distribution and other distributions is that the
+values in a sampling distribution are summary measures of whole samples (i.e. statistics, or
+estimators) rather than individual observations.
+
+Formally, the mean of a sampling distribution is called the **expected value** of the estimator,
+denoted by $\text{E}(.)$.
+
+An *unbiased estimator* has its expected value equal to the parameter being estimated.
+
+Fortunately, the sample mean $\overline{X}$ is *always* an unbiased estimator of
+$\mu$ in simple random sampling, regardless of the:
+
+- sample size, $n$
+- distribution of the (parent) population.
+
+Ideally, the possible values of the estimator should not vary much around the
+true parameter value. So, we seek an estimator with a small variance.
+
+Recall the variance is defined to be the *mean of the squared deviations about the mean* of the
+distribution. In the case of sampling distributions, it is referred to as the **sampling variance**.
+
+For population size N and sample size n, we note the following result when
+sampling without replacement (once an object has been chosen it cannot be
+selected again):
+
+$$ \text{Var}(\overline{X}) = \frac{N - n}{N - 1} \times \frac{\sigma^2}{n}. $$
+
+We use the term **standard error** to refer to the standard deviation of the
+sampling distribution, so:
