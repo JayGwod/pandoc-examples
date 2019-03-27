@@ -1466,6 +1466,20 @@ do not initially look at all like $\overline{X}$ for a single random variable in
 
 **For many distributions, $n > 50$ is sufficient for the approximation to be reasonably accurate.**
 
+# 5.6 Proportions: confidence intervals and hypothesis testing
 
+The (approximate) sampling distribution of the sample proportion:
 
+$$ \overline{X} = P \rightarrow N(\mu, \frac{\sigma^2}{n}) = N(\pi, \frac{\pi(1 - \pi)}{n}) $$
 
+as $n \rightarrow \infty$.
+
+We will now use this result to conduct **statistical inference for proportions**.
+
+## Confidence intervals
+
+A confidence interval for a proportion is given by:
+
+$$ p \pm z \times \sqrt{\frac{p(1-p)}{n}}. $$
+
+# 6.1 Decision tree analysis
