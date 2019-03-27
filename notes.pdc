@@ -1330,8 +1330,8 @@ resemble those of the population distribution from which the sample is drawn.
 As such, we consider the **sample size influence** on the $p$-value. For a 
 non-zero effect size[^6] the **$p$-value decreases as the sample size increases**.
 
-[6]:
-  A zero effect size would result in non-rejection of $\text{H}_0$, regardless of n.
+[^6]:
+  A zero effect size would result in non-rejection of $\text{H}_0$, regardless of $n$.
 
 In Section 5.2, we defined the power of the test as the probability that the 
 test will reject a false null hypothesis. In order to reject the null hypothesis 
@@ -1424,3 +1424,48 @@ As we have rejected $\text{H}_0$ this means of two things:
 
 Although the $p$-value is very small, indicating it is *highly unlikely* that is
 a Type I error, unfortunately we cannot be *certain* which outcome has actually occurred!
+
+# 5.5 The central limit theorem
+
+In essence, the **central limit theorem (CLT)** states that the normal sampling 
+distribution of which holds *exactly* for random samples from a normal distribution,
+also holds *approximately* for random samples from *nearly any* distribution.
+
+The CLT applies to 'nearly any' distribution because it requires that the variance of the
+population distribution is finite. If it is not, the CLT does not hold. However, such
+distributions are not common.
+
+Suppose that ${X_1, X_2, ..., X_n}$ is a random sample from a population 
+distribution which has mean $\text{E}(X_i) = \mu < \infty$ and variance $\text{Var}(X_i) = \sigma^2 < \infty$,
+that is with a finite mean and finite variance. Let $\overline{X}_n$ denote the 
+sample mean calculated from a random sample of size $n$, then:
+
+$$ \lim_{n \rightarrow \infty} P(\frac{\overline{X}_n - \mu}{\sigma/\sqrt{n}} \leq z) = \Phi(z) $$
+
+for any $z$, where $\Phi(z) = P(Z \leq z)$ denotes a cumulative probability of
+the standard normal distribution.
+
+The **'$\lim_{n \rightarrow \infty}$'** indicates that this is an **asymptotic**
+result, i.e. one which holds increasingly well as $n$ increases, and exactly
+when the sample size is infinite.
+
+## The wide reach of the CLT
+
+It may appear that the CLT is still somewhat limited, in that it applies only to sample means
+calculated from random samples. However, this is not really true, for two main reasons.
+
+- There are more general versions of the CLT which do not require the observations $X_i$ to
+  be independent and identically distributed (IID).
+- Even the basic version applies very widely, when we realise that the '$X$' can also be
+  a function of the original variables in the data.
+
+Therefore, the CLT can also be used to derive sampling distributions for many statistics which
+do not initially look at all like $\overline{X}$ for a single random variable in a random sample.
+
+## How large is 'large n'?
+
+**For many distributions, $n > 50$ is sufficient for the approximation to be reasonably accurate.**
+
+
+
+
