@@ -897,12 +897,12 @@ After being interviewed, these respondents are asked to identify others who belo
 to the target population of interest. Subsequent respondents are selected based on
 these referrals.
 
-Types | Strengths | Weaknesses
-:---| :---: | :---:
-Convenience sampling | cheapest, quickest and most convenient | selecition bias and lack of a representative sample
+Types                | Strengths                                                                                         | Weaknesses
+:---                 | :---:                                                                                             | :---:
+Convenience sampling | cheapest, quickest and most convenient                                                            | selecition bias and lack of a representative sample
 Judgemental sampling | low cost, convenient, not particularly time-consuming and good for 'exploratiry' research designs | not allow generalisations and is subjevtive due to the judgement of the researcher
-Quota sampling | can controll a sample for certain characteristics | it suffers from selection bias and there is no guarantee of representativeness of the sample
-Snowball sampling | increase the chance of locating the desired characteristic in the population | time-consuming
+Quota sampling       | can controll a sample for certain characteristics                                                 | it suffers from selection bias and there is no guarantee of representativeness of the sample
+Snowball sampling    | increase the chance of locating the desired characteristic in the population                      | time-consuming
 
 # 4.2 Random sampling
 
@@ -1102,7 +1102,7 @@ $$ \text{Var}(\overline{X}) = \frac{N - n}{N - 1} \times \frac{\sigma^2}{n}. $$
 We use the term **standard error** to refer to the standard deviation of the
 sampling distribution, so:
 
-$$ \text{S.E.}(\overline{X})= \sqrt{\text{Var}(\overline{X})}= \sqrt{\frac{N-n}{N-1}\times\frac{\sigma^2}{n}} = \sigma_\overline{X}. $$
+$$ \text{S.E.}(\overline{X}) = \sqrt{\text{Var}(\overline{X})}= \sqrt{\frac{N-n}{N-1}\times\frac{\sigma^2}{n}} = \sigma_{\overline{X}}. $$
 
 Some implications are the following.
 
@@ -1122,7 +1122,7 @@ while $n$ is comparably small (at most 1,000, say).
 
 Therefore, in such cases the factor $(N - n)/(N - 1)$ is close to 1, hence:
 
-$$ \text{Var}(\overline{X})= \frac{N-n}{N-1}\times\frac{\sigma^2}{n} \approx \frac{\sigma^2}{n} = \frac{\text{Var}(X)}{n} $$
+$$ \text{Var}(\overline{X}) = \frac{N-n}{N-1}\times\frac{\sigma^2}{n} \approx \frac{\sigma^2}{n} = \frac{\text{Var}(X)}{n} $$
 
 for small $n/N$. When $N$ is large, it is the sample size $n$ which is important
 in determining precision, *not* the sampling fraction.
@@ -1131,3 +1131,291 @@ in determining precision, *not* the sampling fraction.
 
 When the distribution of $X$ is *normal*, the sampling distribution of $\overline{X}$
 is also normal.
+
+# 4.6 Confidence intervals
+
+A **point estimate** (such as a sample mean, $\overline{x}$) is our ‘best guess’ of an
+unknown population parameter (such as a population mean, $\mu$) based on sample data.
+
+$$ \text{E}(\overline{X}) = \mu $$
+
+meaning that *the sample* mean is equal to the population mean, as it is based
+on a sample there is some *uncertainty (imprecision)* in the accuracy of the
+estimate. Different random samples would tend to lead to different observed sample
+means. **Confidence intervals** communicate the level of imprecision by converting
+a point estimate into an interval estimate.
+
+Formally, an x% confidence interval **covers** the unknown parameter with x%
+probability over repeated samples. The shorter the confidence interval, the more
+reliable the estimate.
+
+As we shall see, this is achievable by:
+
+- reducing the level of confidence (undesirable)
+- increasing the sample size (costly).
+
+If we assume we have either i. **known $\sigma$**, or ii. **unknown $\sigma$ but
+a large sample size**, say $n \geq 50$, then the formulae for the **endpoints**
+of a confidence interval for a single mean are:
+
+$$ \text{i.}\quad \overline{x} \pm z \times \frac{\sigma}{\sqrt{n}} \quad \text{and} \quad \text{ii.} \quad \overline{x} \pm z \times \frac{s}{\sqrt{n}}. $$
+
+Here $\overline{x}$ is the sample mean, $\sigma$ is the population standard
+deviation, $s$ is the sample standard deviation, $n$ is the sample size and $z$
+is the **confidence coefficient**, reflecting the confidence level.
+
+## Influences on the margin of error
+
+More simply, we can view the confidence interval for a mean as:
+
+$$ \text{best guess} \pm \text{margin of error} $$
+
+where $\overline{x}$ is the best guess, and the margin of error is:
+
+$$ \text{i.}\quad z \times \frac{\sigma}{\sqrt{n}} \quad \text{and} \quad \text{ii.} \quad z \times \frac{s}{\sqrt{n}}. $$
+
+Therefore, we see that there are **three influences on the size of the margin of error** (and hence on the width of the confidence interval). Specifically:
+
+
+
+## Confidence coefficients
+
+For a 95% confidence interval, z = 1.96, leading to:
+
+$$ \text{i.}\quad \overline{x} \pm 1.96 \times \frac{\sigma}{\sqrt{n}} \quad \text{and} \quad \text{ii.} \quad \overline{x} \pm 1.96 \times \frac{s}{\sqrt{n}}. $$
+
+Other levels of confidence pose no problem, but require a different confidence
+coefficient. For **large n**, we obtain this coefficient from the **standard
+normal distribution**.
+
+- For 90% confidence, use the confidence coefficient z = 1.645.
+- For 95% confidence, use the confidence coefficient z = 1.960.
+- For 99% confidence, use the confidence coefficient z = 2.576.
+
+# 5.1 Statistical juries
+
+**Hypothesis testing**: decision theory whereby we make a binary decision between
+two competing hypotheses:
+
+$$ \text{H}_0 = \text{the null hypothesis} \quad \text{and} \quad \text{H}_1 = \text{the alternative hypothesis.} $$
+
+The binary decision is whether to **'reject $\text{H}_0$'** or **'fail to reject $\text{H}_0$'**.
+
+# 5.2 Type I and Type II errors
+
+In any hypothesis test there are two types of **inferential decision error**
+which could be committed.
+
+- Type I error: rejecting $\text{H}_0$ when it is true. This can be thought of
+  as a 'false positive'. Denote the probability of this type of error by $\alpha$.
+- Type II error: failing to reject $\text{H}_0$ when it is false. This can be
+  thought of as a 'false negative'. Denote the probability of this type of error by $\beta$.
+
+Type I error is usually considered to be more problematic.[^4]
+
+[^4]:
+  Thinking back to trials by jury, conventional wisdom is that it is better to
+  let 100 guilty people walk free than to convict a single innocent person.
+  While you are welcome to disagree, this view is consistent with Type I errors
+  being more problematic.
+
+The possible **decision space** can be presented as:
+
+True state of nature | $\text{H}_0$ not rejected | $\text{H}_0$ rejected
+---                  | :---:                     | :---:
+$\text{H}_0$ true    | Correct decision          | **Type I error**
+$\text{H}_1$ true    | **Type II error**         | Correct decision
+
+The complement of a Type II error, that is 1 − $\beta$, is called the **power** of
+the test – the probability that the test will reject a false null hypothesis.
+Hence power measures the ability of the test to reject a false $\text{H}_0$,
+and so we seek the most powerful test for any testing situation.
+
+Unlike $\alpha$, we do not control test power. However, we can increase it by
+increasing the sample size, $n$ (a larger sample size will inevitably improve
+the accuracy of our statistical inference).
+
+These concepts can be summarised as **conditional probabilities**.
+
+True state of nature | $\text{H}_0$ not rejected  | $\text{H}_0$ rejected
+---                  | :---:                      | :---:
+$\text{H}_0$ true    | $1 - \alpha$               | $P(\text{Type I error}) = \alpha$
+$\text{H}_1$ true    | $P(\text{Type II error}) = \beta$ | $\text{Power} = 1 - \beta$
+
+If you decrease $\alpha$ you increase $\beta$ and vice-versa. Hence there is a trade-off.
+
+## Significance level
+
+In general we test at the $100\alpha%$ significance level, for $\alpha \in [0, 1]$. The
+default choice is $\alpha = 0.05$, i.e. we test at the 5% significance level.
+Of course, this value of $\alpha$ is subjective, and a different significance
+level may be chosen. The severity of a Type I error in the context of a specific
+hypothesis test might for example justify a more conservative or liberal choice for $\alpha$.
+
+In fact, we could view the **significance level as the complement of the
+confidence level**.[^5] For example:
+
+[^5]:
+  Strictly speaking, this would apply to so-called ‘two-tailed’ hypothesis tests.
+
+- a 90% confidence level equates to a 10% significance level
+- a 95% confidence level equates to a 5% significance level
+- a 99% confidence level equates to a 1% significance level.
+
+# 5.3 $P$-values, effect size and sample size influences
+
+A **$p$-value** is the probability of the event that the 'test statistic' takes
+the observed value or more extreme (i.e. more unlikely) values under $\text{H}_0$.
+It is a measure of the discrepancy between the hypothesis $\text{H}_0$ and the
+data evidence.
+
+- A 'small' $p$-value indicates that $\text{H}_0$ is not supported by the data.
+- A ‘large’ $p$-value indicates that $\text{H}_0$ is not inconsistent with the data.
+
+So $p$-values may be seen as a **risk measure** of rejecting $\text{H}_0$.
+
+**A small probability event would be very unlikely to occur in a single experiment.**
+Remember:
+
+$$ \text{not reject} \neq \text{accept} $$
+
+## Interpretation of $p$-values
+
+In practice the statistical analysis of data is performed by computers using
+statistical or econometric software packages. Regardless of the specific hypothesis
+being tested, the execution of a hypothesis test by a computer returns a $p$-value.
+Fortunately, there is a universal decision rule for $p$-values.
+
+Section 5.2 explained that we control for the probability of a Type I error
+through our choice of significance level, $\alpha$, where $\alpha \in [0, 1]$.
+Since $p$-values are also probabilities, as defined above, we simply compare
+$p$-values with our chosen benchmark significance level, $\alpha$.
+
+The $p$-value decision rule is shown below for $\alpha$ = 0.05:
+
+![$p$-value decision rule](https://ws2.sinaimg.cn/large/006tKfTcly1g1h9zh23m7j317c07675x.jpg)
+
+Our decision is to **reject $\text{H}_0$ if the $p$-value is $\leq \alpha$**. Otherwise, $\text{H}_0$ is not rejected.
+
+Clearly, the magnitude of the $p$-value (compared with $\alpha$) determines
+whether or not $\text{H}_0$ is rejected. Therefore, it is important to consider
+**two key influences** on the magnitude of the $p$-value: the effect size and the sample size.
+
+## Effect size influence
+
+The **effect size** reflects the difference between what you would *expect* to 
+observe if the null hypothesis is true and what is *actually* observed in a 
+random experiment. Equality between our expectation and observation would 
+equate to a zero effect size, which (while not proof that $\text{H}_0$ is true) 
+provides the most convincing evidence in favour of $\text{H}_0$. As the 
+difference between our expectation and observation increases, the data 
+evidence becomes increasingly inconsistent with $\text{H}_0$ making us more 
+likely to reject $\text{H}_0$. **Hence as the effect size gets larger, the 
+$p$-value gets smaller** (and so is more likely to be below $\alpha$).
+
+**Sensitivity analysis**: we consider the pure influence of the effect size on
+the $p$-value while controlling for (fixing) the sample size.
+
+## Sample size influence
+
+Other things equal, **a larger sample size should lead to a more representative 
+random sample** and the characteristics of the sample should more closely 
+resemble those of the population distribution from which the sample is drawn.
+
+As such, we consider the **sample size influence** on the $p$-value. For a 
+non-zero effect size[^6] the **$p$-value decreases as the sample size increases**.
+
+[6]:
+  A zero effect size would result in non-rejection of $\text{H}_0$, regardless of n.
+
+In Section 5.2, we defined the power of the test as the probability that the 
+test will reject a false null hypothesis. In order to reject the null hypothesis 
+it is necessary to have a sufficiently small p-value (less than $\alpha$), 
+hence we see that we can unilaterally increase the power of a test by 
+increasing the sample size. Of course, the trade-off would be the increase in 
+data collection costs!
+
+# 5.4 Testing a population mean claim
+
+We consider the **hypothesis test of a population mean** in the context of a 
+claim made by a manufacturer.
+
+As an example, the amount of water in mineral water bottles exhibits slight 
+variations attributable to the bottle-filling machine at the factory not putting 
+in *identical* quantities of water in each bottle. The labels on each bottle may 
+state '1000ml' but this equates to a **claim about the average contents** 
+of all bottles produced (in the population of bottles).
+
+## Calculation of the sample mean from the raw observations
+
+A random sample of $n=12$ bottles resulted in the measurements (in ml): 
+992, 1002, 1000, 1001, 998, 999, 1000, 995, 1003, 1001, 997 and 997.
+
+Calculate the sample mean in our random sample:
+
+$$ \overline{x} = (992+1002+1000+1001+998+999+1000+995+1003+1001+997+997)/12 = 998.75 $$
+
+## Formulation of the hypotheses, $\text{H}_{0}$ and $\text{H}_{1}$
+
+It is assumed that the true variance of water in all bottles is $\sigma^2 = 1.5$, 
+and that the amount of water in bottles is normally distributed. Let $X$ denote 
+the quantity of water in a bottle such that:
+
+$$ X \sim N(\mu, \sigma^2) $$
+
+and we wish to test:
+
+$$ \text{H}_{0}: \mu = 1000 \text{ml} \quad \text{vs.} \quad \text{H}_{1}: \mu \neq 1000ml. $$
+
+The question is whether the difference between $\overline{x} = 998.75$ and the 
+claim $\mu = 500$ is:
+
+(a) **due to sampling error** (and hence $\text{H}_0$ is true)?
+(b) **statistically significant** (and hence $\text{H}_1$ is true)?
+
+**Determination of the $p$-value** will allow us to choose between explanations (a) and (b).
+
+## Calculation of the test statistic value
+
+We proceed by **standardising** $\overline{X}$ such that:
+
+$$ Z = \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1) $$
+
+acts as our **test statistic**. Note the test statistic includes the effect size,
+$\overline{X}-\mu$, as well as sample size, $n$.
+
+Using our sample data, we now obtain the test statistic value (noting the **influence of
+both the effect size and the sample size**, and hence ultimately the influence on the
+$p$-value):
+
+$$ \frac{1000 - 998.75}{\sqrt{1.5}/\sqrt{12}} \approx 3.5. $$
+
+## Calculation of the $p$-value
+
+The $p$-value is the probability of our test statistic value or a more extreme
+value conditional on $\text{H}_0$. Noting that $\text{H}_1:\mu \neq 1000$, 'more extreme' here
+means a $z$-score > 3.5 and < -3.5. Due to the symmetry of the standard normal
+distribution about zero, this can be expressed as:
+
+$$ p-value = P(Z \geq \mid 3.5 \mid) = 0.00046. $$
+
+## A decision of whether or not to reject $\text{H}_{0}$
+
+Recall the **$p$-value decision rule**, and since 0.00046 < 0.05 we reject $\text{H}_0$ and
+conclude that the result 'statistically significant' at the 5% significance level
+(and also, of course, at the 1% significance level).
+
+## An inferential conclusion about what the test result means
+
+Hence there is (strong) evidence that $\mu \neq 1000$. Since $\overline{x} < \mu$
+we might go further and suppose that $\mu < 1000$.
+
+## Indication of which type of error might have occurred
+
+As we have rejected $\text{H}_0$ this means of two things:
+
+- we have correctly rejected $\text{H}_0$
+- we have committed a Type I error.
+
+Although the $p$-value is very small, indicating it is *highly unlikely* that is
+a Type I error, unfortunately we cannot be *certain* which outcome has actually occurred!
