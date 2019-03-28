@@ -1178,9 +1178,7 @@ Therefore, we see that there are **three influences on the size of the margin of
 error** (and hence on the width of the confidence interval). Specifically:
 
 $$ \text{as }n \uparrow \quad \Rightarrow \quad \text{margin of error} \downarrow \quad \Rightarrow \quad \text{width} \downarrow $$
-
 $$ \text{as }\sigma \uparrow \quad \Rightarrow \quad \text{margin of error} \uparrow \quad \Rightarrow \quad \text{width} \uparrow $$
-
 $$ \text{as confidence level} \uparrow \quad \Rightarrow \quad \text{margin of error} \uparrow \quad \Rightarrow \quad \text{width} \uparrow $$
 
 ## Confidence coefficients
@@ -1251,7 +1249,7 @@ If you decrease $\alpha$ you increase $\beta$ and vice-versa. Hence there is a t
 
 ## Significance level
 
-In general we test at the $100\alpha%$ significance level, for $\alpha \in [0, 1]$. The
+In general we test at the $100\alpha\%$ significance level, for $\alpha \in [0, 1]$. The
 default choice is $\alpha = 0.05$, i.e. we test at the 5% significance level.
 Of course, this value of $\alpha$ is subjective, and a different significance
 level may be chosen. The severity of a Type I error in the context of a specific
@@ -1483,3 +1481,76 @@ A confidence interval for a proportion is given by:
 $$ p \pm z \times \sqrt{\frac{p(1-p)}{n}}. $$
 
 # 6.1 Decision tree analysis
+
+**Decision tree analysis** is an interesting modelling technique which allow us
+to incorporate probabilities in the decision-making process to model and quantify
+the uncertainty.
+
+**Decision analysis**: there is only one rational decision-maker making non-strategic decisions.
+
+**Game theory**: two or more rational decision-makers making strategic decisions.
+
+A standard decision tree consists of the following components:
+
+- **Decision nodes** indicate that the decision-maker has to make a choice, denoted $\square$.
+- **Chance nodes** indicate the resolution of uncertainty, denoted $\bigcirc$.
+- **Branches** represent the choices available to the decision-maker (if leading from
+  decision nodes) or the possible outcomes if uncertainty is resolved (leading from
+  chance nodes).
+- **Probabilities** are written at the branches leading from chance nodes.
+- **Payoffs** are written at the end of the final branches.
+
+A decision tree has the following properties:
+
+- No loops.
+- One initial node.
+- At most one branch between any two nodes.
+- Connected paths.
+- At a decision node the decision-maker has information on all preceding events,
+  in particular on the resolution of uncertainty.
+
+![The decision  tree](https://ws4.sinaimg.cn/large/006tKfTcly1g1ipoe8snkj30rm0l8agw.jpg)
+
+In order to solve the decision tree we calculate the **expected monetary value (EMV)** 
+of each option (advertise and not advertise) and proceed whereby the decision-maker
+maximises **expected profits**.
+
+The EMV is simply an expected value, and so in this discrete setting we apply our
+usual probability-weighted average approach. Hence the **optimal (recommended)
+strategy** is to advertise, since this results in a higher expected payoff.
+
+# 6.2 Risk
+
+In practice people care about risk and tend to factor it into their decision making.
+Of course, different people have different attitudes to risk so we can profile people’s risk appetite as follows.
+
+## Degrees of risk aversion
+
+A decision-maker is **risk-averse** if s/he prefers the certain outcome of £x over a 
+risky project with a mean (EMV) of £x.
+
+A decision-maker is **risk-loving** (also known as risk-seeking) if s/he prefers a 
+risky project with a mean (EMV) of £x over the certain outcome of £x.
+
+A decision-maker is **risk-neutral** if s/he is indifferent between a sure payoff and 
+an uncertain outcome with the same expected monetary value.
+
+The **certainty equivalent (CE)** of a risky project is the amount of money which makes 
+the decision-maker indifferent between receiving this amount for sure and the risky project.
+
+## Risk premium
+
+The **risk premium** (of a risky project) is defined as:
+
+$$ \text{EMV} - \text{CE}. $$
+
+Interpretation: The amount of money the decision-maker is willing to pay to 
+receive a safe payoff of X rather than face the risky project with an expected payoff of X.
+
+Risk profiles can be determined using the following:
+
+$$ \text{EMV} < \text{CE} \quad \Rightarrow \quad \text{risk-averse} $$
+$$ \text{EMV} = \text{CE} \quad \Rightarrow \quad \text{risk-neutral} $$
+$$ \text{EMV} > \text{CE} \quad \Rightarrow \quad \text{risk-loving.} $$
+
+**If risk-neutral, the decision-maker uses the EMV criterion as seen in Section 6.1.**
