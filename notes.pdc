@@ -1554,3 +1554,228 @@ $$ \text{EMV} = \text{CE} \quad \Rightarrow \quad \text{risk-neutral} $$
 $$ \text{EMV} > \text{CE} \quad \Rightarrow \quad \text{risk-loving.} $$
 
 **If risk-neutral, the decision-maker uses the EMV criterion as seen in Section 6.1.**
+
+# 6.3 Linear regression
+
+**Linear regression analysis** is one of the most frequently-used statistical techniques.
+It aims to model an explicit relationship between one **dependent variable**, denote as
+$y$, and one or more **regressors** (also covariates, or independent variables),
+denoted as $x_1,...,x_p$.
+
+The goal of regression analysis is to **understand** how $y$ depends on $x_1,...,x_p$
+and to **predict** or control the unobserved $y$ based on the observed $x_1,...,x_p$.
+
+## Example
+
+In a university town, the sales, $y$, of 10 pizza parlour restaurants are closely
+to the student population, $x$, ion their neighbourhoods.
+
+![the sales (in thousands of pounds) in a period of three months together with the numbers of students (in thousands) in their neighbourhoods](https://ws2.sinaimg.cn/large/006tKfTcly1g1jkxweh1wj30k20pc0v3.jpg)
+
+The scatterplot above shows the sales (in thousands of pounds) in a period of 
+three months together with the numbers of students (in thousands) in their neighbourhoods.
+
+We plot $y$ against $x$, and draw a straight line through the middle of the data points:
+
+$$ y = \alpha + \beta x + \epsilon $$
+
+where $\epsilon$ stands for a **random error term**, $\alpha$ is the intercept and
+$\beta$ is the slope of the straight line.
+
+For a given student population, $x$, the **predicted sales** are:
+
+$$ \hat{y} = \alpha + \beta x. $$
+
+Some other possible examples of $y$ and $x$ are shown in the following table:
+
+$y$                    | $x$
+--                     | --
+Sales                  | Price
+Weight gain            | Protein in diet
+Present FTSE 100 index | Past FTSE  100 index
+Consumption            | Income
+Salary                 | Tenure
+Daughter's height      | Mother's height
+
+## The simple linear regression model
+
+We now present the simple linear regression model. Let the paired observations
+$(x_1,y_1),...,(x_n,y_n)$ be drawn from the model:
+
+$$ y_i = \alpha + \beta x_i + \epsilon_i $$
+
+where:
+
+$$ \text{E}(\epsilon_i) = 0 \quad \text{and} \quad \text{Var}(\epsilon_i) = \sigma^2 > 0. $$
+
+So the model has three parameters: $\beta_0$, $\beta_1$ and $\sigma^2$. In a formal
+course on regression you would consider the following questions:
+
+- **How to draw a line through data clouds, i.e. how to $\alpha$ and $\beta$?**
+- **How accurate is the fitted line?**
+- **What is the error in predicting a future $y$?**
+
+## Example
+
+We can apply the simple linear regression model to study the relationship between 
+two series of financial returns – a regression of a stock’s returns, $y$, on the
+returns of an underlying market index, $x$. This regression model is an example 
+of the **capital asset pricing model (CAPM)**.
+
+Stock returns are defined as:
+
+$$ \text{return} = \frac{\text{current} - \text{previous price}}{\text{previous price}} \approx \log(\frac{\text{current price}}{\text{previous price}}) $$
+
+when the difference between the two prices is small. Daily prices are definitely
+not independent. However, daily returns may be seen as a **sequence of uncorrelated random variables**.
+
+The capital asset pricing model (CAPM) is a simple asset pricing model in finance given by:
+
+$$ y_i = \alpha + \beta x_i + \epsilon_i $$
+
+where $y_i$ is a stock return and $x_i$ is a market return at time $i$.
+
+The **total risk  of the stock** is:
+
+$$ \frac{1}{n} \sum_{i=1}^{n} (y_i - \overline{y})^2 = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_i} - \overline{y})^2
++ \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2. $$
+
+The **market-related (or systematic) risk** is:
+
+$$ \frac{1}{n} \sum_{i=1}^{n} (\hat{y_i} - \overline{y})^2 = \frac{1}{n} \hat{\beta}^2 \sum_{i=1}^{n} (x_i - \overline{x})^2. $$
+
+The **firm-specific risk** is:
+
+$$ \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2. $$
+
+Some remarks are the following:
+
+1. $\beta$ the market-related (or systematic) risk of the stock.
+1. Market-related risk is unavoidable, while firm-specific risk may be 'diversified away'
+   through *hedging*.
+1. Variance is a simple measure (and one of the most frequently-used) of risk in finance.
+
+
+So the **'beta' of a stock is a simple measure of the riskiness of that stock** 
+with respect to the market index. By definition, the market index has $\beta = 1$.
+
+If a stock has a beta of 1, then:
+
+$$ \text{if the market index } \uparrow \text{by 1\%, then the stock } \uparrow \text{by 1\%} $$
+
+and:
+
+$$ \text{if the market index } \downarrow \text{by 1\%, then the stock } \downarrow \text{by 1\%} $$
+
+If a stock has a beta of 2, then:
+
+$$ \text{if the market index } \uparrow \text{by 1\%, then the stock } \uparrow \text{by 2\%} $$
+
+and:
+
+$$ \text{if the market index } \downarrow \text{by 1\%, then the stock } \downarrow \text{by 2\%} $$
+
+If a stock has a beta of 0.5, then:
+
+$$ \text{if the market index } \uparrow \text{by 1\%, then the stock } \uparrow \text{by 0.5\%} $$
+
+and:
+
+$$ \text{if the market index } \downarrow \text{by 1\%, then the stock } \downarrow \text{by 0.5\%} $$
+
+In summary:
+
+$$ \text{if } \beta > 1 \quad \Rightarrow \quad \text{risky stocks} $$
+
+as market movements are amplified in the stock's returns, and:
+
+$$ \text{if } \beta < 1 \quad \Rightarrow \quad \text{defensive stocks} $$
+
+as market movements are muted in the stock’s returns.
+
+# 6.4 Linear programming
+
+Linear programming is probably one of the most-used type of **quantitative 
+business model**. It can be applied in any environment where **finite resources** 
+must be allocated to competing activities or processes for maximum benefit, for example:
+
+- selecting an investment portfolio of stocks to maximise return
+- allocating a fixed budget between competing departments
+- allocating lorries to routes to minimise the transportation costs incurred by a distribution company.
+
+## Optimisation models
+
+All optimisation models have several common elements.
+
+- **Decision variables**, or the variables whose values the decision-maker is 
+  allowed to choose. These are the variables which a company must know to function 
+  properly – they determine everything else.
+- **Objective function** to be optimised – either maximised or minimised.
+- **Constraints** which must be satisfied – physical, logical or economic restrictions,
+  depending on the nature of the problem.
+
+## Solving optimisation problems
+
+The first step is the **model development step**. You must decide:
+
+- the decision variables, the objective and the constraints
+- how everything fits together, i.e. develop correct algebraic expressions and relate all variables with appropriate formulae.
+
+The second step is to **optimise**.
+
+- A *feasible solution* is a solution which satisfies all of the constraints.
+- The *feasible region* is the set of all feasible solutions.
+- An *infeasible solution* violates at least one of the constraints.
+- The *optimal solution* is the feasible solution which optimises the objective.
+
+The third step is to perform a **sensitivity analysis** – to what extent is the 
+final solution *sensitive* to parameter values used in the model.
+
+# 6.5 Monte Carlo simulation
+
+Trying different solutions is **expensive** and/or **risky**. For example:
+
+- testing different products in the market
+- designing a new schedule of arrivals/departures for an airport.
+
+**Improving the system** is difficult. For example:
+
+- which is the most profitable product to be released in the market?
+- what is the optimal flight schedule for an airport?
+
+Finding a **robust system** design is a challenge. For example:
+
+- a product which sells well under tough market conditions
+- an airport schedule which can deal with delays and disruptions.
+
+**Monte Carlo simulation** works by simulating multiple hypothetical future 
+worlds reflecting that the outcome variable of interest is a random variable 
+with a probability distribution. We can then determine the **expected outcome**, 
+as well as a quantification of risk, using the usual statistics of mean and 
+variance. Decision-makers can then make an informed judgement about the best 
+course of action **based on their risk appetite**.
+
+To perform a Monte Carlo simulation we proceed as follows.
+
+1. Associate a (pseudo-)random number generator for each input variable.
+1. Assign a range of random numbers for each input variable (according to some assumed probability distribution).
+1. For each input variable:    
+    
+    - generate a random number
+    - from the random number, select the respective variable value.
+
+1. Calculate the outcome, $x$, and record it.
+1. Repeat '3.' and '4.' until the desired number of iterations, $N$, is reached.
+1. Draw a histogram of the outcomes and determine the mean and variance of the simulated outputs:
+  $$ \overline{x} = \frac{1}{N} \sum_{i=1}^{N} x_i $$
+  and:
+  $$ s^2 = \frac{1}{N - 1} \sum_{i=1}^N (x_i - \overline{x})^2. $$
+  The mean gives our estimate of the expected outcome, while the variance is our measure
+  of risk.
+
+Of course, the quality of these expected outcome and risk estimates is only as 
+good as the model used. What if the true probability distributions were different? 
+What if revenues and costs were correlated? What if other factors affected profit as well?
+
+Clearly, in practice we would wish to conduct a **sensitivity analysis** to see 
+how sensitive (or robust) the distribution of the outcome variable is to such issues.
