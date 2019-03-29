@@ -1371,7 +1371,7 @@ and we wish to test:
 $$ \text{H}_{0}: \mu = 1000 \text{ml} \quad \text{vs.} \quad \text{H}_{1}: \mu \neq 1000ml. $$
 
 The question is whether the difference between $\overline{x} = 998.75$ and the 
-claim $\mu = 500$ is:
+claim $\mu = 1000$ is:
 
 (a) **due to sampling error** (and hence $\text{H}_0$ is true)?
 (b) **statistically significant** (and hence $\text{H}_1$ is true)?
@@ -1391,7 +1391,7 @@ Using our sample data, we now obtain the test statistic value (noting the **infl
 both the effect size and the sample size**, and hence ultimately the influence on the
 $p$-value):
 
-$$ \frac{1000 - 998.75}{\sqrt{1.5}/\sqrt{12}} \approx 3.5. $$
+$$ \frac{998.75 - 1000}{\sqrt{1.5}/\sqrt{12}} \approx -3.5. $$
 
 ## Calculation of the $p$-value
 
