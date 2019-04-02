@@ -1,12 +1,42 @@
 # Assignment Two: Hypothesis Testing
 
+We consider the **hypothesis test of a population mean** in the context of a 
+claim made by a manufacturer.
+
+As an example, the amount of water in mineral water bottles exhibits slight 
+variations attributable to the bottle-filling machine at the factory not putting 
+in *identical* quantities of water in each bottle. The labels on each bottle may 
+state '1000ml' but this equates to a **claim about the average contents** 
+of all bottles produced (in the population of bottles).
+
 ## Calculation of the sample mean from the raw observations
+
+A random sample of $n=12$ bottles resulted in the measurements (in ml): 
+992, 1002, 1000, 1001, 998, 999, 1000, 995, 1003, 1001, 997 and 997.
+
+Calculate the sample mean in our random sample:
 
 $$ \overline{x} = (992+1002+1000+1001+998+999+1000+995+1003+1001+997+997)/12 = 998.75 $$
 
-## Formulation of the hypotheses, $H_{0}$ and $H_{1}$
+## Formulation of the hypotheses, $\text{H}_{0}$ and $\text{H}_{1}$
 
-$H_{0}: \mu = 1000$ml vs. $H_{1}: \mu \neq 1000$ml.
+It is assumed that the true variance of water in all bottles is $\sigma^2 = 1.5$, 
+and that the amount of water in bottles is normally distributed. Let $X$ denote 
+the quantity of water in a bottle such that:
+
+$$ X \sim N(\mu, \sigma^2) $$
+
+and we wish to test:
+
+$$ \text{H}_{0}: \mu = 1000 \text{ml} \quad \text{vs.} \quad \text{H}_{1}: \mu \neq 1000ml. $$
+
+The question is whether the difference between $\overline{x} = 998.75$ and the 
+claim $\mu = 1000$ is:
+
+(a) **due to sampling error** (and hence $\text{H}_0$ is true)?
+(b) **statistically significant** (and hence $\text{H}_1$ is true)?
+
+**Determination of the $p$-value** will allow us to choose between explanations (a) and (b).
 
 ## Calculation of the test statistic value
 
@@ -21,20 +51,20 @@ Using our sample data, we now obtain the test statistic value (noting the **infl
 both the effect size and the sample size**, and hence ultimately the influence on the
 $p$-value):
 
-$$ \frac{1000 - 998.75}{\sqrt{1.5}/\sqrt{12}} \approx 3.5. $$
+$$ \frac{998.75 - 1000}{\sqrt{1.5}/\sqrt{12}} \approx -3.5. $$
 
 ## Calculation of the $p$-value
 
 The $p$-value is the probability of our test statistic value or a more extreme
-value conditional on $H_0$. Noting that $H_1:\mu \neq 1000$, 'more extreme' here
+value conditional on $\text{H}_0$. Noting that $\text{H}_1:\mu \neq 1000$, 'more extreme' here
 means a $z$-score > 3.5 and < -3.5. Due to the symmetry of the standard normal
 distribution about zero, this can be expressed as:
 
-$$ p-value = P(Z \geq \mid 3.5 \mid) = 0.00046. $$
+$$ p\text{-value} = P(Z \geq \mid 3.5 \mid) = 0.00046. $$
 
-## A decision of whether or not to reject $H_{0}$
+## A decision of whether or not to reject $\text{H}_{0}$
 
-Recall the **$p$-value decision rule**, since 0.00046 < 0.05 we reject $H_0$ and
+Recall the **$p$-value decision rule**, and since 0.00046 < 0.05 we reject $\text{H}_0$ and
 conclude that the result 'statistically significant' at the 5% significance level
 (and also, of course, at the 1% significance level).
 
@@ -45,10 +75,11 @@ we might go further and suppose that $\mu < 1000$.
 
 ## Indication of which type of error might have occurred
 
-As we have rejected $H_0$ this means of two things:
+As we have rejected $\text{H}_0$ this means of two things:
 
-- we have correctly rejected $H_0$
+- we have correctly rejected $\text{H}_0$
 - we have committed a Type I error.
 
 Although the $p$-value is very small, indicating it is *highly unlikely* that is
-a Type I error, unfortunately we cannot be certain which outcome has actually occurred!
+a Type I error, unfortunately we cannot be *certain* which outcome has actually occurred!
+
