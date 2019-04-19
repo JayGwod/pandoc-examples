@@ -255,6 +255,8 @@ $$ \hat{p}(x_i) = \frac{f_i}{\sum_{i=1}^K f_i} $$
 are the **sample proportions** of the values $x_i$. The expected value of the
 random variable $X$ is:
 
+$$ E(X) = x_1 p_(x_1) + … + x_K p(x_K) = \sum_{i=1}^{K} x_i p(x_i). $$
+
 So $\overline{X}$ uses sample proportions, $\hat{p}(x_i)$, whereas $E(X)$ uses
 the population probabilities, $p(x_i)$.
 
