@@ -1,11 +1,10 @@
 ---
 title: A Review of Machine Learning
 author: Guo Dejie
-date: \today{}
 abstract: This review gives a big picture about machine learning.
 keywords: test
-number-sections: true
-documentclass: extarticle
+numbersections: true
+documentclass: article
 ---
 
 # Introduction
@@ -22,4 +21,12 @@ part, the current best practices would be briefly outlined, including how to
 train a model such that the resulting predictor does well on data not yet seen,
 how to select a model and how to set up your machine learning workflow.
 
-# part one
+# Components of a machine learning system
+
+There are three major components of a machine learning system: data, models and
+learning. This section covers a few necessary bits and pieces of mathematical and statistical
+language that are commonly used to talk about machine learning systems.
+
+## Data as Vectors
+
+
